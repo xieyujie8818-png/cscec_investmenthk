@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>香港簡訊 · {{ report.date }}</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="masthead">
+    <p class="kicker">香港簡訊</p>
+    <h1>{{ report.weekday_label }}</h1>
+    <p class="dept">海外與投資部 編制</p>
+    <p class="headline">{{ report.headline }}</p>
+  </header>
+
+  <section class="toc">
+    <h2>目 錄</h2>
+    {% set page = namespace(n=2) %}
+    {% set toc_idx = namespace(n=0) %}
+    {% for section_name, items in report.sections.items() %}
+    <h3>【{{ section_name }}】</h3>
+    <ul>
+      {% for item in items %}
+      <li>
+        <a href="#art-{{ toc_idx.n }}">{{ item.title }}</a>
+        <span class="page-ref">{{ page.n }}</span>
+        <p class="catalog">{{ item.catalog_summary }}</p>
+      </li>
+      {% set page.n = page.n + 1 %}
+      {% set toc_idx.n = toc_idx.n + 1 %}
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </section>
+
+  <section class="articles">
+    {% set art_idx = namespace(n=0) %}
+    {% for section_name, items in report.sections.items() %}
+    {% for item in items %}
+    <article id="art-{{ art_idx.n }}" class="article">
+      {% set art_idx.n = art_idx.n + 1 %}
+      <h2><a href="{{ item.url }}" target="_blank" rel="noopener">{{ item.title }}</a></h2>
+      <p class="meta">[來源：{{ item.source_name }}] · 評分 {{ item.total_score }}</p>
+      <p class="lead">【本報{{ report.date[5:7] }}月{{ report.date[8:10] }}日消息】</p>
+      {% for para in item.paragraphs %}
+      <p>{{ para }}</p>
+      {% endfor %}
+      <p class="source-link"><a href="{{ item.url }}" target="_blank" rel="noopener">原文鏈接</a></p>
+    </article>
+    {% endfor %}
+    {% endfor %}
+  </section>
+
+  <footer>
+    <p>內部使用 · 生成時間 {{ report.meta.get('generated_at', '') }}</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+=== PER-PROJECT FIELD MATRIX ===
+
+Project 1: 21 Valley Road, Ho Man Tin
+  Description paras: 2
+  Desc length: 1327 chars
+  Client:: — MISSING —
+  Completion:: 2024
+  Details of awards: N/A
+  Parent Company:: China State Construction International Holdings Limited
+  Project Cost:: HK$ 500million
+  Project Type:: A&A works/ University/ Hostel /Hotel /Residential
+
+Project 2: Two Victoria, Kai Tak
+  Description paras: 3
+  Desc length: 1429 chars
+  Client:: Not available
+  Completion:: 2024
+  Details of awards: (label only, value next para)
+  Parent Company:: — MISSING —
+  Project Cost:: — MISSING —
+  Project Type:: A&A works/ University/ Hostel /Hotel /Residential
+
+Project 3: One Victoria, Kai Tak
+  Description paras: 4
+  Desc length: 1380 chars
+  Client:: Not available
+  Completion:: 2022
+  Details of awards: (label only, value next para)
+  Parent Company:: — MISSING —
+  Project Cost:: — MISSING —
+  Project Type:: A&A works/ University/ Hostel /Hotel /Residential
+
+Project 4: Guanchen 246
+  Description paras: 3
+  Desc length: 1683 chars
+  Client:: Zhuhai Zhixiang Real Estate Development Co., Ltd
+  Completion:: 2025
+  Details of awards: Zhuhai AAA Quality Structure Award
+  Parent Company:: — MISSING —
+  Project Cost:: RMB 350 million
+  Project Type:: A&A works/ University/ Hostel /Hotel /Residential
+
+Project 5: No.8 Huabichang Hutong Project, Beijing
+  Description paras: 3
+  Desc length: 1150 chars
+  Client:: Not available
+  Completion:: 2024
+  Details of awards: (label only, value next para)
+  Parent Company:: — MISSING —
+  Project Cost:: — MISSING —
+  Project Type:: A&A works/ University/ Hostel /Hotel /Residential
+
+=== GRAMMAR / TYPO SCAN ===
+  locate at (should be located): ...ject Description This project is locate at Area 4B of the former Kai Tak Runway (21 Shing Fu...
+  500million (no space): ...Residential Project Cost: HK$ 500million Completion: 2024 Parent Company: China State Cons...
+  HK\$ 500: ...el /Residential Project Cost: HK$ 500million Completion: 2024 Parent Company: China Sta...
+  comma splice / run-on: ...located at 15-21 Valley Road, Ho Man Tin, is built upon a 3,900-square feet and comprises a new 22-s...
+  Ltd\(688\) no space: ...na Overseas Land & Investment Ltd(688) to drive the project forward. This collaborative ...
+  Ltd\(688\) missing space before paren: ...na Overseas Land & Investment Ltd(688) to drive the project forward. This collaborative ...
+  orphan sentence fragment: ...ritical phase of development, construction, sales, and marketing. By synergizing the unique strategic advantages o...
+  smart/curly quotes: ...ternational Holdings Limited (“CSCI or the “Group”), successfully achieved full o...
+  smart/curly quotes: ...oldings Limited (“CSCI or the “Group”), successfully achieved full ownership unif...
+  smart/curly quotes: ...s Limited (“CSCI or the “Group”), successfully achieved full ownership unificatio...
+  smart/curly quotes: ...roject Excellence Award (from “橫琴微音信息科技有限公司”) Project: No.8 Huabichang Hutong Pro...
+  smart/curly quotes: ...ence Award (from “橫琴微音信息科技有限公司”) Project: No.8 Huabichang Hutong Project, Beijing...
+  smart/curly quotes: ...s a landmark pilot for Beijing’s old urban residential renewal under the "demolis...
+  smart/curly quotes: ...heng District, the development’s site area is around 374 square meter with a tota...
+  encoding garble: ...erves as a landmark pilot for Beijing’s old urban residential renewal under the "demolish and...
+  slash spacing inconsistent: ...force. Project Type: A&A works/ University/ Hostel /Hotel /Residential Project Cos...
+  slash spacing inconsistent: ...ct Type: A&A works/ University/ Hostel /Hotel /Residential Project Cost: HK$ 500mi...
+  slash spacing inconsistent: ...value. Project Type: A&A works/ University/ Hostel /Hotel /Residential Completion:...
+  slash spacing inconsistent: ...ct Type: A&A works/ University/ Hostel /Hotel /Residential Completion: 2024 Client...
+  slash spacing inconsistent: ...ction. Project Type: A&A works/ University/ Hostel /Hotel /Residential Completion:...
+  slash spacing inconsistent: ...ct Type: A&A works/ University/ Hostel /Hotel /Residential Completion: 2022 Client...
+  slash spacing inconsistent: ...rties. Project Type: A&A works/ University/ Hostel /Hotel /Residential Project Cos...
+  slash spacing inconsistent: ...ct Type: A&A works/ University/ Hostel /Hotel /Residential Project Cost: RMB 350 m...
+  slash spacing inconsistent: ...thods. Project Type: A&A works/ University/ Hostel /Hotel /Residential Completion:...
+  slash spacing inconsistent: ...ct Type: A&A works/ University/ Hostel /Hotel /Residential Completion: 2024 Client...
+
+=== PROJECT TYPE VALUES ===
+  P1: A&A works/ University/ Hostel /Hotel /Residential
+  P2: A&A works/ University/ Hostel /Hotel /Residential
+  P3: A&A works/ University/ Hostel /Hotel /Residential
+  P4: A&A works/ University/ Hostel /Hotel /Residential
+  P5: A&A works/ University/ Hostel /Hotel /Residential
+
+=== AWARDS VALUES ===
+  P1: N/A
+  P2: (label only, value next para)
+  P3: (label only, value next para)
+  P4: Zhuhai AAA Quality Structure Award
+  P5: (label only, value next para)
+
+=== CV DUPLICATE CHECK (same discipline PM) ===
+  21 Valley Road, Ho Man Tin: CV overlap ~81.2%
+  Two Victoria, Kai Tak: not clearly matched in CV
+  One Victoria, Kai Tak: not clearly matched in CV
+  Guanchen 246: not clearly matched in CV
+  No.8 Huabichang Hutong Project, Beijing: not clearly matched in CV
+
+=== STRUCTURAL / FORMAT NOTES ===
+  Discipline header: ['5.0', 'Project Management']
+  File prefix says 1.0 but body says 5.0 Project Management
+  Header lines 1-4: ['Section 4(i)', 'Corporate Profile', 'Section 4(i)(b)', 'Detailed information of not more than 5 job references for each discipline of similar size as the Accommodation']
+  Empty para gaps: indices jump (para 4-5 missing in first block)
+  Orphan fragment at para index 39: construction, sales, and marketing. By synergizing the unique strategic advantages of both partners,
+  Project 1 awards empty or N/A
+  Project 2 awards empty or N/A
+  Project 3 awards empty or N/A
+  Project 5 awards empty or N/A

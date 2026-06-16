@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "name_zh": "大埔寶馬山",
+    "name_en": "Pacific Palisades",
+    "address_zh": "山賢路8號",
+    "address_en": "8 Shan Yin Road, Tai Po, Hong Kong",
+    "lat": 22.44235,
+    "lng": 114.17233,
+    "source": "fallback"
+  },
+  {
+    "id": "2",
+    "name_zh": "雍怡雅苑",
+    "name_en": "Chateau Royale",
+    "address_zh": "雍宜路1號",
+    "address_en": "1 Chung Yee Road, Tai Po, Hong Kong",
+    "lat": 22.4418,
+    "lng": 114.1712,
+    "source": "fallback"
+  },
+  {
+    "id": "3",
+    "name_zh": "泓山",
+    "name_en": "The Cavaridge",
+    "address_zh": "逸遙路3號",
+    "address_en": "3 Yat Yiu Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4365,
+    "lng": 114.1818,
+    "source": "fallback"
+  },
+  {
+    "id": "4",
+    "name_zh": "天鑽",
+    "name_en": "The Regent",
+    "address_zh": "創新路1號",
+    "address_en": "1 Chong San Road, Tai Po, Hong Kong",
+    "lat": 22.4285,
+    "lng": 114.2055,
+    "source": "fallback"
+  },
+  {
+    "id": "5",
+    "name_zh": "悠然山莊",
+    "name_en": "The Paragon",
+    "address_zh": "山賢路9號",
+    "address_en": "9 Shan Yin Road, Tai Po, Hong Kong",
+    "lat": 22.4421,
+    "lng": 114.1728,
+    "source": "fallback"
+  },
+  {
+    "id": "6",
+    "name_zh": "偉東·雍宜山莊",
+    "name_en": "Grand Dynasty View",
+    "address_zh": "下黃宜坳",
+    "address_en": "201 Ha Wong Yi Au, Tai Po, Hong Kong",
+    "lat": 22.4432,
+    "lng": 114.1745,
+    "source": "fallback"
+  },
+  {
+    "id": "7",
+    "name_zh": "叠翠豪庭",
+    "name_en": "The Paramount",
+    "address_zh": "大埔公路大埔滘段4188號",
+    "address_en": "4188 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4338,
+    "lng": 114.1835,
+    "source": "fallback"
+  },
+  {
+    "id": "8",
+    "name_zh": "峰林",
+    "name_en": "The Peak",
+    "address_zh": "大埔公路大埔滘段4135號",
+    "address_en": "4135 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4342,
+    "lng": 114.184,
+    "source": "fallback"
+  },
+  {
+    "id": "9",
+    "name_zh": "史提福樓",
+    "name_en": "Stafford House",
+    "address_zh": "大埔公路4130號",
+    "address_en": "4130 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4345,
+    "lng": 114.1843,
+    "source": "fallback"
+  },
+  {
+    "id": "10",
+    "name_zh": "逍遥雋岸",
+    "name_en": "The Gables",
+    "address_zh": "逸遙路18號",
+    "address_en": "18 Yat Yiu Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4362,
+    "lng": 114.1822,
+    "source": "fallback"
+  },
+  {
+    "id": "11",
+    "name_zh": "翡翠花園",
+    "name_en": "Savanna Garden",
+    "address_zh": "大埔公路大埔滘段4283號",
+    "address_en": "4283 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4325,
+    "lng": 114.1865,
+    "source": "fallback"
+  },
+  {
+    "id": "12",
+    "name_zh": "僑東·羅宜山莊",
+    "name_en": "Kiu Tung Lo Yee Villa",
+    "address_zh": "大埔滘羅宜路",
+    "address_en": "Lo Yee Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4405,
+    "lng": 114.1708,
+    "source": "fallback"
+  }
+]

@@ -1,0 +1,217 @@
+/* 香港簡訊 leadership slides — 手機優先 */
+.tpl-hk-brief {
+  --brief-red: #c8102e;
+  --brief-red-dark: #9b0c24;
+  font-family: "Microsoft YaHei", "PingFang TC", "Noto Sans SC", sans-serif;
+}
+
+.tpl-hk-brief .slide {
+  padding: 56px 28px 80px 36px;
+  justify-content: flex-start;
+  background: var(--bg);
+}
+
+.tpl-hk-brief .h1 {
+  font-size: clamp(28px, 7vw, 52px);
+  line-height: 1.15;
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.tpl-hk-brief .h2 {
+  font-size: clamp(18px, 4.5vw, 32px);
+  line-height: 1.35;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.tpl-hk-brief .lede {
+  font-size: clamp(15px, 3.8vw, 20px);
+  color: var(--text-2);
+  max-width: none;
+}
+
+.tpl-hk-brief .cover-bar {
+  height: 4px;
+  background: var(--accent);
+  width: 64px;
+  margin: 1.5rem 0;
+}
+
+.tpl-hk-brief .date-chip {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  font-size: 14px;
+}
+
+.tpl-hk-brief .deck-footer {
+  position: absolute;
+  left: 36px;
+  right: 28px;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--text-3);
+  pointer-events: none;
+}
+
+.tpl-hk-brief .slide-cover {
+  justify-content: center;
+}
+
+.tpl-hk-brief .slide-cover .h1 {
+  font-size: clamp(36px, 9vw, 64px);
+  letter-spacing: 0.15em;
+}
+
+.tpl-hk-brief .slide-toc .toc-section {
+  margin-bottom: 1.25rem;
+}
+
+.tpl-hk-brief .slide-toc .toc-section h4 {
+  margin: 0 0 0.5rem;
+  color: var(--accent-2);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.tpl-hk-brief .slide-toc .toc-section ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--text-1);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.tpl-hk-brief .slide-toc .toc-section li {
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+}
+
+.tpl-hk-brief .slide-section {
+  justify-content: center;
+}
+
+.tpl-hk-brief .slide-section .section-count {
+  color: var(--text-2);
+  font-size: 15px;
+}
+
+.tpl-hk-brief .slide-article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tpl-hk-brief .slide-article .article-top {
+  flex-shrink: 0;
+  margin-bottom: 0.75rem;
+}
+
+.tpl-hk-brief .slide-article .article-meta {
+  font-size: 13px;
+  color: var(--text-2);
+  margin: 0.35rem 0 0;
+}
+
+.tpl-hk-brief .slide-article .article-meta .dateline {
+  color: var(--accent-2);
+  font-weight: 600;
+}
+
+.tpl-hk-brief .slide-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding-right: 4px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-1);
+  text-align: justify;
+}
+
+.tpl-hk-brief .slide-body p {
+  margin: 0 0 0.85rem;
+}
+
+.tpl-hk-brief .slide-body p.subhead {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--accent);
+  margin: 1.1rem 0 0.5rem;
+  text-align: left;
+}
+
+.tpl-hk-brief .slide-body p.subhead strong {
+  font-weight: inherit;
+  color: inherit;
+}
+
+.tpl-hk-brief .slide-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem 0;
+  border: 1px solid var(--border);
+}
+
+.tpl-hk-brief .slide-end {
+  justify-content: center;
+  text-align: center;
+}
+
+.tpl-hk-brief .mobile-hint {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 28px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-3);
+  z-index: 25;
+  pointer-events: none;
+}
+
+.tpl-hk-brief .tap-zones {
+  position: fixed;
+  inset: 0;
+  z-index: 15;
+  display: flex;
+  pointer-events: none;
+}
+
+.tpl-hk-brief .tap-zones span {
+  flex: 1;
+  pointer-events: auto;
+}
+
+@media (min-width: 769px) {
+  .tpl-hk-brief .mobile-hint,
+  .tpl-hk-brief .tap-zones {
+    display: none;
+  }
+
+  .tpl-hk-brief .slide {
+    padding: 64px 88px 72px 96px;
+  }
+
+  .tpl-hk-brief .slide-body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tpl-hk-brief .overview.open {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+    gap: 10px;
+  }
+}

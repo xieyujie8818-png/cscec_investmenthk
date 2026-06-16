@@ -1,0 +1,31 @@
+【海外投資部 · 香港簡訊】{{ report.weekday_label }}
+
+
+
+各位同事好，香港簡訊已更新（海外與投資部編制）。
+
+
+
+**今日提要**
+
+{{ report.headline }}
+
+
+
+{% for section_name, items in report.sections.items() %}
+
+**【{{ section_name }}】**
+
+{% for item in items %}
+
+{{ loop.index }}. {{ item.title }} — {{ item.catalog_summary }}
+
+{% endfor %}
+
+{% endfor %}
+
+
+
+完整正文見：`daily-brief.md` / `daily-brief.html` / `daily-brief.docx`（{{ report.weekday_label }}）
+
+

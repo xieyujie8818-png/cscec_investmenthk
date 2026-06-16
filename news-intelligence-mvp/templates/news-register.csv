@@ -1,0 +1,3 @@
+news_id,title,publish_date,source_name,source_url,source_credibility,region,country,sector,digest_section,topic_tags,summary,business_implication,recommended_audience,importance_score,relevance_score,actionability_score,credibility_score,total_score,human_status,reviewer,review_notes
+YYYYMMDD-001,示例：HKET電子報報道今日金融市場或企業財政變化,YYYY-MM-DD,HKET 電子報,https://example.com,A,全港,香港,今日金融與經濟,今日金融與經濟,"金融;經濟;企業財政;市場風險","用100-200字概括事件、數據、金額、政策或市場反應。","說明對決策層理解宏觀環境、資金成本或企業財政風險的意義。","領導",5,5,4,5,98,待審核,待填寫,
+YYYYMMDD-002,示例：HKET地產站報道啟德跑道區租金或酒店改建動態,YYYY-MM-DD,HKET 地產站,https://example.com,A,啟德,香港,樓市改建,建築與地產,"啟德;跑道區;租金;酒店改建;學生宿舍","用100-200字概括樓盤/酒店名稱、成交或租金水平、改建用途和市場背景。","說明是否可作啟德片區租金、學生宿舍或改建可行性參考。","領導;項目;拓展",4,5,4,5,86,待審核,待填寫,

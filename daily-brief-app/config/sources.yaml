@@ -1,0 +1,235 @@
+# 列表页 + 正文页（严格按栏绑定 article URL，见 fetchers.SECTION_ARTICLE_PATTERNS）
+
+# HKET 要闻(srap001)：正文可为 invest.hket.com 或 paper.hket.com/article/…
+
+# HKET 地产(srap007)：正文为 paper.hket.com/article/…
+
+# HKET 即时新闻(inews/sran001)：正文为 inews.hket.com/article/…；标题预筛通过才抓正文
+
+# 明报列表：…/pns/經濟/section/{date_compact}/s00004
+
+# 文匯網：僅經濟/財經/地產/投資四欄列表主欄（排除側邊欄、點擊排行、財評評論）
+
+# 所有列表：title_prefilter=true → 先匹配标题再抓正文
+
+# listing_url 日期占位：{date}=YYYY-MM-DD（信报）  {date_compact}=YYYYMMDD（明报/HKET dis=）
+
+
+
+sources:
+
+  hket:
+
+    name: 香港經濟日報
+
+    credibility: A
+
+    requires_login: true
+
+    login_url: https://paper.hket.com
+
+    session_check_url: https://paper.hket.com
+
+    article_domains:
+
+      - invest.hket.com
+
+      - paper.hket.com
+
+      - inews.hket.com
+
+    sections:
+
+      - id: finance_invest
+
+        label: 要聞
+
+        section_type: finance
+
+        listing_url: https://paper.hket.com/srap001/%E8%A6%81%E8%81%9E?dis={date_compact}
+
+        title_prefilter: true
+
+      - id: property
+
+        label: 地產
+
+        section_type: property
+
+        listing_url: https://paper.hket.com/srap007/%E5%9C%B0%E7%94%A2?dis={date_compact}
+
+        listing_url_fallback: https://paper.hket.com/srap007/?dis={date_compact}
+
+        title_prefilter: true
+
+      - id: instant_news
+
+        label: 即時新聞
+
+        section_type: finance
+
+        listing_url: https://inews.hket.com/sran001/%E5%85%A8%E9%83%A8
+
+        title_prefilter: true
+
+        max_links: 40
+
+
+
+  hkej:
+
+    name: 信報
+
+    credibility: A
+
+    requires_login: true
+
+    login_url: https://subscribe.hkej.com/member/login?forwardURL=%2F%2Fwww.hkej.com%2Flanding%2Findex
+
+    login_url_alt: https://www.hkej.com/landing/index
+
+    session_check_url: https://www.hkej.com/dailynews/headline
+
+    article_domains:
+
+      - hkej.com
+
+    sections:
+
+      - id: headline
+
+        label: 要聞
+
+        section_type: finance
+
+        listing_url: https://www.hkej.com/dailynews/headline?date={date}
+
+        title_prefilter: true
+
+      - id: property
+
+        label: 地產
+
+        section_type: property
+
+        listing_url: https://www.hkej.com/dailynews/property?date={date}
+
+        title_prefilter: true
+
+
+
+  mingpao:
+
+    name: 明報
+
+    credibility: A
+
+    requires_login: true
+
+    login_url: https://news.mingpao.com/php/login1.php
+
+    session_check_url: https://news.mingpao.com/pns/%E8%A6%81%E8%81%9E
+
+    article_domains:
+
+      - news.mingpao.com
+
+    sections:
+
+      - id: economy
+
+        label: 經濟/地產
+
+        section_type: finance
+
+        listing_url: https://news.mingpao.com/pns/%E7%B6%93%E6%BF%9F/section/{date_compact}/s00004
+
+        title_prefilter: true
+
+
+
+  wenweipo:
+
+    name: 香港文匯報
+
+    credibility: A
+
+    requires_login: false
+
+    login_url: https://www.wenweipo.com/
+
+    article_domains:
+
+      - wenweipo.com
+
+    sections:
+
+      - id: economy
+
+        label: 經濟
+
+        section_type: finance
+
+        listing_url: https://www.wenweipo.com/business
+
+        title_prefilter: true
+
+      - id: finance
+
+        label: 財經
+
+        section_type: finance
+
+        listing_url: https://www.wenweipo.com/business/finance
+
+        title_prefilter: true
+
+      - id: property
+
+        label: 地產
+
+        section_type: property
+
+        listing_url: https://www.wenweipo.com/business/real-estate
+
+        title_prefilter: true
+
+      - id: investment
+
+        label: 投資
+
+        section_type: finance
+
+        listing_url: https://www.wenweipo.com/business/investment
+
+        title_prefilter: true
+
+
+
+# 欄目參考配額（軟性指引，非硬性限制）
+
+quotas:
+
+  金融與經濟: 5
+
+  建築與地產: 10
+
+  北都專題: 2
+
+
+
+# 候選池每欄最多條數；定稿建議總量見 selection
+
+candidate_pool_size: 20
+
+
+
+selection:
+
+  target_total_min: 15
+
+  target_total_max: 20
+
+  min_total_score: 70
+
+

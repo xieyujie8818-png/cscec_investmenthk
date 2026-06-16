@@ -1,0 +1,141 @@
+TOTAL NON-EMPTY PARAS: 78
+
+=== FIRST 25 PARAGRAPHS ===
+[0] style='' bold=True | Section 4(i)
+[1] style='' bold=True | Corporate Profile
+[2] style='' bold=True | Section 4(i)(b)
+[3] style='' bold=True | Detailed information of not more than 5 job references for each discipline of similar size as the Accommodation
+[6] style='' bold=True | 5.0
+[7] style='' bold=True | Project Management
+[9] style='' bold=True | Project:
+[10] style='45' bold=False | 21 Valley Road, Ho Man Tin
+[14] style='45' bold=True | Project Description
+[15] style='45' bold=False | The redevelopment project is located at 15-21 Valley Road, Ho Man Tin, is built upon a 3,900-square feet and comprises a new 22-story employee residence built over a demolished older structure. The project commenced in mid-2019 by Auspice Investment Limited, a subsidiary of the China State Construct
+[16] style='45' bold=False | Throughout the development phase, Auspice Investment Limited directed a full suite of professional consultants, including architectural, structural, mechanical and electrical, interior design, traffic, environmental, and quantity surveyor. During construction, the project encountered several obstacl
+[18] style='' bold=True | Project Type:
+[19] style='45' bold=False | A&A works/ University/ Hostel /Hotel /Residential
+[20] style='' bold=True | Project Cost:
+[21] style='45' bold=False | HK$ 500million
+[22] style='' bold=True | Completion:
+[23] style='45' bold=False | 2024
+[24] style='' bold=True | Parent Company:
+[25] style='45' bold=False | China State Construction International Holdings Limited
+[28] style='45' bold=True | Details of awards and other performance-based prizes, accolades and letters of appreciation
+[29] style='45' bold=False | N/A
+[57] style='' bold=True | Project:
+[58] style='45' bold=False | Two Victoria, Kai Tak
+[62] style='45' bold=True | Project Description
+[63] style='45' bold=False | This project is located at Area 4E, Site 1 of the Kai Tak Development Zone (2 Shing Fung Lane), this prestigious residential development encompasses a site area of approximately 59,718 square feet. The project features two high-rise residential towers, delivering a total of 702 units. The saleable a
+
+=== PROJECT BLOCKS ===
+
+--- Project 1 ---
+  Project:
+  21 Valley Road, Ho Man Tin
+  Project Description
+  The redevelopment project is located at 15-21 Valley Road, Ho Man Tin, is built upon a 3,900-square feet and comprises a new 22-story employee residence built over a demolished older structure. The project commenced in mid-2019 by Auspice Investment 
+  Throughout the development phase, Auspice Investment Limited directed a full suite of professional consultants, including architectural, structural, mechanical and electrical, interior design, traffic, environmental, and quantity surveyor. During con
+  Project Type:
+  A&A works/ University/ Hostel /Hotel /Residential
+  Project Cost:
+  HK$ 500million
+  Completion:
+  2024
+  Parent Company:
+  China State Construction International Holdings Limited
+  Details of awards and other performance-based prizes, accolades and letters of appreciation
+  N/A
+
+--- Project 2 ---
+  Project:
+  Two Victoria, Kai Tak
+  Project Description
+  This project is located at Area 4E, Site 1 of the Kai Tak Development Zone (2 Shing Fung Lane), this prestigious residential development encompasses a site area of approximately 59,718 square feet. The project features two high-rise residential tower
+  Replicating the successful governance model of One Victoria, a joint Project Management Committee was established between the Group and 688. This collaborative body exercised comprehensive oversight in managing consultancy teams, formulating architec
+  Following completion, COPSL took over the estate management. Utilizing modernized smart management systems, they deliver comprehensive property management services and premium residential clubhouse amenities, guaranteeing exceptional post-handover op
+  Project Type:
+  A&A works/ University/ Hostel /Hotel /Residential
+  Completion:
+  2024
+  Client:
+  Not available
+  Details of awards and other performance-based prizes, accolades and letters of appreciation
+
+--- Project 3 ---
+  Project:
+  One Victoria, Kai Tak
+  Project Description
+  This project is locate at Area 4B of the former Kai Tak Runway (21 Shing Fung Road), this residential development encompasses a site area of approximately 97,393 square feet. The project comprises two high-rise towers and one low-rise residential blo
+  A joint Project Management Committee was established between the Group and China Overseas Land & Investment Ltd(688) to drive the project forward. This collaborative body exercised comprehensive oversight in managing consultancy teams, formulating ar
+  construction, sales, and marketing. By synergizing the unique strategic advantages of both partners, the project achieved seamless completion while ensuring the highest standards of structural and architectural quality.
+  Following completion, COPSL took over the estate management. Utilizing modernized smart management systems, they deliver comprehensive property management services and premium residential clubhouse amenities, guaranteeing exceptional post-handover op
+  Project Type:
+  A&A works/ University/ Hostel /Hotel /Residential
+  Completion:
+  2022
+  Client:
+  Not available
+  Details of awards and other performance-based prizes, accolades and letters of appreciation
+
+--- Project 4 ---
+  Project:
+  Guanchen 246
+  Project Description
+  The Project is located 1.6 kilometers from Gongbei Port on Yingbin South Road, Zhuhai. This project involved transforming a legacy unfinished development into two modern residential towers and a commercial podium, with a total gross floor area of app
+  During the development phase, the team conducted comprehensive market research to establish precise product positioning and handled all architectural design and statutory construction approvals. In the subsequent construction phase, the team took ful
+  The project faced severe difficulties due to a highly constrained site surrounded by legacy neighbourhoods, extreme underground boulder conditions, and the challenge of attracting Macau buyers. To solve these problems, the team implemented strict saf
+  Project Type:
+  A&A works/ University/ Hostel /Hotel /Residential
+  Project Cost:
+  RMB 350 million
+  Completion:
+  2025
+  Client:
+  Zhuhai Zhixiang Real Estate Development Co., Ltd
+  Details of awards and other performance-based prizes, accolades and letters of appreciation
+  ... (17 paras total)
+
+--- Project 5 ---
+  Project:
+  No.8 Huabichang Hutong Project, Beijing
+  Project Description
+  This project serves as a landmark pilot for Beijing’s old urban residential renewal under the "demolish and rebuild at the original location" framework. Located in Xinjiekou Street, Xicheng District, the development’s site area is around 374 square m
+  Utilizing an advanced "Concrete Modular Integrated Construction (C-MiC) plus precast components" structural system, the building was assembled using 55 concrete volumetric modules within an exceptionally compressed construction timeframe of just 90 d
+  From its inception, the design fully incorporated green, low-carbon, and energy-saving principles, successfully attaining the Two-Star rating under the national Assessment Standard for Green Building. By shifting 90% of the structural workload to off
+  Project Type:
+  A&A works/ University/ Hostel /Hotel /Residential
+  Completion:
+  2024
+  Client:
+  Not available
+  Details of awards and other performance-based prizes, accolades and letters of appreciation
+
+=== LABEL COUNTS ===
+  Project:: 5
+  Project Description: 5
+  Project Type:: 5
+  Project Cost:: 2
+  Completion:: 5
+  Client:: 4
+  Period:: 0
+  Employer:: 0
+  Contract Period:: 0
+  Annual Conntract: 0
+  Annual Contract: 0
+  Number of Rooms:: 0
+  Details of awards: 5
+
+=== PATTERN CHECKS ===
+  Section 4(i) standalone: 1 hit(s)
+  Corporate Profile in header area: 1 hit(s)
+  inconsistent HKD/HK$: 1 hit(s)
+  smart quote issues: 7 hit(s)
+
+Project count: 5
+
+=== DISCIPLINE / SECTION MARKERS ===
+  [0] Section 4(i)
+  [1] Corporate Profile
+  [2] Section 4(i)(b)
+  [6] 5.0
+  [7] Project Management

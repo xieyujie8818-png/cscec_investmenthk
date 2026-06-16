@@ -1,0 +1,38 @@
+﻿=== Single Room @ 40279 ===
+BB":[],"Q":false,"S":false,"N":"paragraph2","P":[],"5":{},"T":{},"W":{},"_":"LBSwXstQTYtQkfgq","a":{"A":[{"A?":"A","A":"Single Room\\n"}],"B":[{"A?":"A","A":{"color":{"B":"#ffffff"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"32.0"},"font-weight":{"B":"bold"},"leading":
+=== Single Room @ 42966 ===
+d3d"}},"D":0.0,"F":false,"J":false,"G":false,"H":false},"e":[]}],"d":[]}],"I":[]},{"A?":"i","a":"PBFRFSYJ2ZJvtwjr","B":"Single Room","R":false,"S":false,"U":false,"Q":{},"K":5,"V":{"C":"C","G":{},"H":{}},"W":[],"X":[],"H":[],"L":{},"C":{"A":1366.0,"B":815.0,"C":"D"},"D":{"C":"#3e
+=== Single Room @ 47284 ===
+,"BB":[],"Q":false,"S":false,"N":"heading1","P":[],"5":{},"T":{},"W":{},"_":"LBvgdYMyHZ733cGk","a":{"A":[{"A?":"A","A":"Single Room - In-unit Facilities  \\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"66.6671"},"font-weigh
+=== 3800 @ 140306 ===
+"C":{"A":338.22301800392796,"B":1219.4586548836587}},"d":"#3e4d3d","e":[],"f":true,"g":[],"h":[]},{"A?":"U","A":558.4909380060417,"B":891.8510686152902,"D":330.2164519317398,"C":3.0,"E":0.2602655450115325,"F":0.3,"BD":[],"BE":[],"BA":[],"BB":[],"Q":false,"S":false,"P":[],"5":{},"
+=== 3800 @ 140530 ===
+":[],"BA":[],"BB":[],"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"_":"LBhlbkdgg9lm5CXp","a":3,"b":{"C":{"A":559.2409380060417,"B":891.852772052228}},"c":{"C":{"A":560.7409380060417,"B":1222.0658171100922}},"d":"#3e4d3d","e":[],"f":true,"g":[],"h":[]},{"A?":"J","A":877.4680682
+=== 3800 @ 140585 ===
+"T":{},"W":{},"_":"LBhlbkdgg9lm5CXp","a":3,"b":{"C":{"A":559.2409380060417,"B":891.852772052228}},"c":{"C":{"A":560.7409380060417,"B":1222.0658171100922}},"d":"#3e4d3d","e":[],"f":true,"g":[],"h":[]},{"A?":"J","A":877.4680682176406,"B":710.6013824912925,"D":366.9999999999999,"C":
+=== 3800 @ 164849 ===
+6a3b24464f1ac7a.otf","format":"OTF_CFF","unicodeRanges":[],"sizeBytes":101012},{"url":"_assets/fonts/cd51f2d8116c91ad0f63800235235e11.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":47000}],"subsettedFiles":[],"scriptSubsetFiles":[],"metadata":{"head":{"unitsPerEm":1000,"y
+=== 3800 @ 221966 ===
+6a3b24464f1ac7a.otf","format":"OTF_CFF","unicodeRanges":[],"sizeBytes":101012},{"url":"_assets/fonts/cd51f2d8116c91ad0f63800235235e11.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":47000}],"subsettedFiles":[],"scriptSubsetFiles":[],"metadata":{"head":{"unitsPerEm":1000,"y
+=== Signle room @ 39311 ===
+BB":[],"Q":false,"S":false,"N":"paragraph2","P":[],"5":{},"T":{},"W":{},"_":"LBH301r8GrYdXR7J","a":{"A":[{"A?":"A","A":"Signle room with a king single bed\\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"20.0"},"list-level":{
+=== Sextuple @ 15210 ===
+BB":[],"Q":false,"S":false,"N":"paragraph2","P":[],"5":{},"T":{},"W":{},"_":"LBFM34YMQLqC0sW5","a":{"A":[{"A?":"A","A":"Sextuple\\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"20.0"},"list-level":{"B":"1.0"},"tracking":{"B"
+=== Sextuple @ 16146 ===
+BB":[],"Q":false,"S":false,"N":"paragraph2","P":[],"5":{},"T":{},"W":{},"_":"LBl6Qy2SfQBrPmlR","a":{"A":[{"A?":"A","A":"Sextuple Room\\n"}],"B":[{"A?":"A","A":{"color":{"B":"#ffffff"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"32.0"},"font-weight":{"B":"bold"},"leading
+=== Sextuple @ 111941 ===
+align":{}}}],"E":{}},"b":{"A":[21]},"d":"A","l":false,"g":false,"h":"A"}],"I":[]},{"A?":"i","a":"PB3hq1mBCjsYdgHH","B":"Sextuple Room","R":false,"S":false,"U":false,"Q":{},"K":4,"W":[],"X":[],"H":[],"L":{},"C":{"A":1366.0,"B":860.0,"C":"D"},"D":{"C":"#374359","D":0.0,"F":false,"J
+=== Sextuple @ 120956 ===
+,"BB":[],"Q":false,"S":false,"N":"heading1","P":[],"5":{},"T":{},"W":{},"_":"LB3L5gKqHCyBHMg0","a":{"A":[{"A?":"A","A":"Sextuple Room -\\nIn-unit Facilities  \\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"66.6671"},"font-w
+=== Twin Room @ 30971 ===
+BB":[],"Q":false,"S":false,"N":"paragraph2","P":[],"5":{},"T":{},"W":{},"_":"LBNk8JTWxkWQjFsw","a":{"A":[{"A?":"A","A":"Twin Room\\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"20.0"},"list-level":{"B":"1.0"},"tracking":{"B
+=== Twin Room @ 31909 ===
+BB":[],"Q":false,"S":false,"N":"paragraph2","P":[],"5":{},"T":{},"W":{},"_":"LBz5QWhys7wWPrbV","a":{"A":[{"A?":"A","A":"Twin Room\\n"}],"B":[{"A?":"A","A":{"color":{"B":"#ffffff"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"32.0"},"font-weight":{"B":"bold"},"leading":{"
+=== Twin Room @ 33020 ===
+,"Q":false,"S":false,"N":"paragraph2","P":[],"5":{},"T":{},"W":{},"_":"LBnySFhws1LWkcMf","a":{"A":[{"A?":"A","A":"Large Twin Room\\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"20.0"},"list-level":{"B":"1.0"},"tracking":{"B
+=== Twin Room @ 52625 ===
+{}}}],"E":{}},"b":{"A":[]},"d":"A","l":false,"g":false,"h":"A"}],"d":[]}],"I":[]},{"A?":"i","a":"PBWpbnr3mLNPS4d2","B":"Twin Room","R":false,"S":false,"U":false,"Q":{},"K":5,"W":[],"X":[],"H":[],"L":{},"C":{"A":1366.0,"B":815.0,"C":"D"},"D":{"C":"#3d4d49","D":0.0,"F":false,"J":fa
+=== Twin Room @ 62533 ===
+,"BB":[],"Q":false,"S":false,"N":"heading1","P":[],"5":{},"T":{},"W":{},"_":"LBg08R7B2cvkyYNH","a":{"A":[{"A?":"A","A":"Twin Room - In-unit Facilities  \\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"66.6671"},"font-weight"
+=== Twin Room @ 68104 ===
+[],"Q":false,"S":false,"N":"heading1","P":[],"5":{},"T":{},"W":{},"_":"LBpFwv5cXyCHPks8","a":{"A":[{"A?":"A","A":"Large Twin Room -\\nIn-unit Facilities  \\n"}],"B":[{"A?":"A","A":{"color":{"B":"#fffcee"},"font-family":{"B":"YAFcf6CtJfI,0"},"font-size":{"B":"66.6671"},"font-weigh

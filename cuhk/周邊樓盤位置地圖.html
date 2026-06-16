@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>大埔黃宜坳周邊 12 個可比屋苑位置圖</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", "Microsoft JhengHei", sans-serif; color: #1a1a1a; }
+    header {
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+      color: #fff;
+    }
+    header h1 { margin: 0 0 4px; font-size: 1.25rem; font-weight: 600; }
+    header p { margin: 0; font-size: 0.85rem; opacity: 0.9; }
+    #layout { display: flex; height: calc(100vh - 72px); }
+    #map { flex: 1; min-width: 0; }
+    #sidebar {
+      width: 340px;
+      overflow-y: auto;
+      border-left: 1px solid #dde3ea;
+      background: #f8fafc;
+    }
+    #sidebar h2 { margin: 0; padding: 12px 16px 8px; font-size: 0.95rem; color: #334155; }
+    .estate-item {
+      display: flex;
+      gap: 10px;
+      padding: 10px 16px;
+      border-bottom: 1px solid #e8edf2;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .estate-item:hover, .estate-item.active { background: #e8f0fe; }
+    .badge {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .estate-item .info { min-width: 0; }
+    .estate-item .name-zh { font-weight: 600; font-size: 0.9rem; }
+    .estate-item .name-en { font-size: 0.78rem; color: #64748b; }
+    .estate-item .addr { font-size: 0.75rem; color: #475569; margin-top: 2px; }
+    .legend-note {
+      padding: 12px 16px 16px;
+      font-size: 0.75rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .legend-note a { color: #2563eb; }
+    .leaflet-popup-content { margin: 10px 14px; line-height: 1.45; }
+    .leaflet-popup-content b { font-size: 1rem; }
+    .leaflet-popup-content .en { color: #555; font-size: 0.85rem; }
+    .leaflet-popup-content .addr { color: #333; font-size: 0.82rem; margin-top: 4px; }
+    .leaflet-popup-content a { font-size: 0.82rem; }
+    @media (max-width: 800px) {
+      #layout { flex-direction: column; height: auto; }
+      #map { height: 55vh; }
+      #sidebar { width: 100%; max-height: 45vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>大埔黃宜坳周邊 · 12 個可比屋苑位置圖</h1>
+    <p>點擊左側列表或地圖標記查看詳情 · 資料來源：屋苑公開地址及地圖坐標</p>
+  </header>
+  <div id="layout">
+    <div id="map"></div>
+    <aside id="sidebar">
+      <h2>屋苑列表</h2>
+      <div id="estate-list"></div>
+      <div class="legend-note">
+        備註：「天」指 <strong>天鑽 The Regent</strong>；「峰林」對應 <strong>峰林軒</strong>（大埔公路4135號）。
+        僑東·羅宜山莊為低密度洋房，標註於大埔滘羅宜路一帶。
+        <br><br>
+        <a id="gmaps-link" href="#" target="_blank" rel="noopener">在 Google 地圖開啟此區域 ↗</a>
+      </div>
+    </aside>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const ESTATES = [
+      { id: 1,  zh: "大埔寶馬山",     en: "Pacific Palisades",      addr: "山賢路8號",                    lat: 22.44235, lng: 114.17233 },
+      { id: 2,  zh: "雍怡雅苑",       en: "Chateau Royale",         addr: "雍宜路1號",                    lat: 22.44180, lng: 114.17120 },
+      { id: 3,  zh: "泓山",           en: "The Cavaridge",          addr: "逸遙路3號",                    lat: 22.43650, lng: 114.18180 },
+      { id: 4,  zh: "天鑽",           en: "The Regent",             addr: "山塘路8號",                    lat: 22.43694, lng: 114.16667 },
+      { id: 5,  zh: "悠然山莊",       en: "The Paragon",            addr: "山賢路9號",                    lat: 22.44210, lng: 114.17280 },
+      { id: 6,  zh: "偉東·雍宜山莊",  en: "Grand Dynasty View",     addr: "下黃宜坳",                     lat: 22.44320, lng: 114.17450 },
+      { id: 7,  zh: "叠翠豪庭",       en: "The Paramount",          addr: "大埔公路大埔滘段4188號",       lat: 22.43380, lng: 114.18350 },
+      { id: 8,  zh: "峰林",           en: "The Peak",               addr: "大埔公路大埔滘段4135號",       lat: 22.43420, lng: 114.18400 },
+      { id: 9,  zh: "史提福樓",       en: "Stafford House",         addr: "大埔公路4130號",               lat: 22.43450, lng: 114.18430 },
+      { id: 10, zh: "逍遥雋岸",       en: "The Gables",             addr: "逸遙路18號",                   lat: 22.43620, lng: 114.18220 },
+      { id: 11, zh: "翡翠花園",       en: "Savanna Garden",         addr: "大埔公路大埔滘段4283號",       lat: 22.43250, lng: 114.18650 },
+      { id: 12, zh: "僑東·羅宜山莊",  en: "Kiu Tung Lo Yee Villa",  addr: "大埔滘羅宜路",                 lat: 22.44050, lng: 114.17080 },
+    ];
+
+    const COLORS = [
+      "#e6194b", "#3cb44b", "#4363d8", "#f58231", "#911eb4", "#42d4f4",
+      "#f032e6", "#bfef45", "#fabed4", "#469990", "#dcbeff", "#9A6324",
+    ];
+
+    const map = L.map("map", { zoomControl: true }).setView([22.437, 114.180], 13);
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+
+    const markers = [];
+    const listEl = document.getElementById("estate-list");
+
+    ESTATES.forEach((e, i) => {
+      const color = COLORS[i % COLORS.length];
+      const icon = L.divIcon({
+        className: "",
+        html: `<div style="background:${color};width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);color:#fff;font:bold 13px/24px sans-serif;text-align:center">${e.id}</div>`,
+        iconSize: [28, 28],
+        iconAnchor: [14, 14],
+      });
+
+      const gmaps = `https://www.google.com/maps/search/?api=1&query=${e.lat},${e.lng}`;
+      const popup = `
+        <b>${e.id}. ${e.zh}</b><br>
+        <span class="en">${e.en}</span><br>
+        <span class="addr">${e.addr}</span><br>
+        <a href="${gmaps}" target="_blank" rel="noopener">Google 地圖 ↗</a>
+      `;
+
+      const marker = L.marker([e.lat, e.lng], { icon }).addTo(map).bindPopup(popup);
+      markers.push(marker);
+
+      const item = document.createElement("div");
+      item.className = "estate-item";
+      item.innerHTML = `
+        <div class="badge" style="background:${color}">${e.id}</div>
+        <div class="info">
+          <div class="name-zh">${e.zh}</div>
+          <div class="name-en">${e.en}</div>
+          <div class="addr">${e.addr}</div>
+        </div>
+      `;
+      item.addEventListener("click", () => {
+        map.setView([e.lat, e.lng], 16, { animate: true });
+        marker.openPopup();
+        document.querySelectorAll(".estate-item").forEach(el => el.classList.remove("active"));
+        item.classList.add("active");
+      });
+      listEl.appendChild(item);
+    });
+
+    const bounds = L.latLngBounds(ESTATES.map(e => [e.lat, e.lng]));
+    map.fitBounds(bounds.pad(0.12));
+
+    document.getElementById("gmaps-link").href =
+      `https://www.google.com/maps/@${bounds.getCenter().lat},${bounds.getCenter().lng},13z`;
+  </script>
+</body>
+</html>

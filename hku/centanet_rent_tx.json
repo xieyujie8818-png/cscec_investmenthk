@@ -1,0 +1,265 @@
+[
+  {
+    "name": "吉喆",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E5%90%89%E5%96%86_2-SSSPWWPSWS",
+    "records": [
+      {
+        "date": "2026-04-01",
+        "block": null,
+        "floor": "低層",
+        "unit_no": "B室",
+        "layout": "1房",
+        "area": 385,
+        "age": 1,
+        "rent": 29500,
+        "psf": 77,
+        "special_psf": 84.7,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E5%90%89%E5%96%86_STT202603R0495",
+        "title": "吉喆 低层 B室"
+      },
+      {
+        "date": "2026-01-12",
+        "block": null,
+        "floor": "低層",
+        "unit_no": "B室",
+        "layout": "1房",
+        "area": 385,
+        "age": 1,
+        "rent": 30000,
+        "psf": 78,
+        "special_psf": 85.8,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E5%90%89%E5%96%86_STT202512R1554",
+        "title": "吉喆 低层 B室"
+      }
+    ],
+    "note": null
+  },
+  {
+    "name": "翰林峰",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E7%BF%B0%E6%9E%97%E5%B3%B0_2-SSPPWWPOWG",
+    "records": [
+      {
+        "date": "2026-06-09",
+        "block": "2座",
+        "floor": "低層",
+        "unit_no": "B室",
+        "layout": "1房",
+        "area": 332,
+        "age": 6,
+        "rent": 23500,
+        "psf": 71,
+        "special_psf": 78.1,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E7%BF%B0%E6%9E%97%E5%B3%B0_SYA202605R1174",
+        "title": "翰林峰 2座 低层 B室"
+      },
+      {
+        "date": "2026-06-01",
+        "block": "2座",
+        "floor": "中層",
+        "unit_no": "C室",
+        "layout": null,
+        "area": 225,
+        "age": 6,
+        "rent": 17800,
+        "psf": 79,
+        "special_psf": 86.9,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E7%BF%B0%E6%9E%97%E5%B3%B0_SGC202605R0952",
+        "title": "翰林峰 2座 中层 C室"
+      },
+      {
+        "date": "2026-05-31",
+        "block": "2座",
+        "floor": "中層",
+        "unit_no": "F室",
+        "layout": "1房",
+        "area": 366,
+        "age": 6,
+        "rent": 24500,
+        "psf": 67,
+        "special_psf": 73.7,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E7%BF%B0%E6%9E%97%E5%B3%B0_SMM202605R0955",
+        "title": "翰林峰 2座 中层 F室"
+      }
+    ],
+    "note": null
+  },
+  {
+    "name": "Kennedy 38",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/KENNEDY%2038_2-SSSPWWPVWS",
+    "records": [
+      {
+        "date": "2026-06-10",
+        "block": null,
+        "floor": "高層",
+        "unit_no": "N室",
+        "layout": "1房",
+        "area": 300,
+        "age": 3,
+        "rent": 27000,
+        "psf": 90,
+        "special_psf": 99.0,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/Kennedy-38_SAW202606R0140",
+        "title": "Kennedy 38 高层 N室"
+      },
+      {
+        "date": "2026-04-28",
+        "block": null,
+        "floor": "中層",
+        "unit_no": "M室",
+        "layout": "1房",
+        "area": 293,
+        "age": 3,
+        "rent": 24000,
+        "psf": 82,
+        "special_psf": 90.2,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/Kennedy-38_SMM202604R0080",
+        "title": "Kennedy 38 中层 M室"
+      },
+      {
+        "date": "2026-04-15",
+        "block": null,
+        "floor": "中層",
+        "unit_no": "C室",
+        "layout": "2房",
+        "area": 456,
+        "age": 3,
+        "rent": 33800,
+        "psf": 74,
+        "special_psf": 81.4,
+        "direction": "西北",
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/Kennedy-38_SYA202603R2099",
+        "title": "Kennedy 38 中层 C室"
+      }
+    ],
+    "note": null
+  },
+  {
+    "name": "嘉林閣",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E5%98%89%E6%9E%97%E9%96%A3_2-SDBBPPKJPS",
+    "records": [],
+    "note": "三年內無租務成交（中原）"
+  },
+  {
+    "name": "碧瑤灣",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E7%A2%A7%E7%91%B6%E6%B9%BE_2-OJQCFRCORO?q=udjgk03it5jzb",
+    "records": [
+      {
+        "date": "2026-05-01",
+        "block": "42座",
+        "floor": "低層",
+        "unit_no": null,
+        "layout": "4房",
+        "area": 2079,
+        "age": 50,
+        "rent": 88000,
+        "psf": 42,
+        "special_psf": 46.2,
+        "direction": "西南",
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E7%A2%A7%E7%91%B6%E6%B9%BE_TGP202603R1804",
+        "title": "碧瑶湾 42座 低层 42座"
+      },
+      {
+        "date": "2026-05-01",
+        "block": "20座",
+        "floor": "中層",
+        "unit_no": "B室",
+        "layout": "2房",
+        "area": 906,
+        "age": 46,
+        "rent": 38500,
+        "psf": 42,
+        "special_psf": 46.2,
+        "direction": "北",
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E7%A2%A7%E7%91%B6%E6%B9%BE_BGV202603R1294",
+        "title": "碧瑶湾 20座 中层 B室"
+      },
+      {
+        "date": "2026-05-01",
+        "block": "40座",
+        "floor": "高層",
+        "unit_no": null,
+        "layout": "3房",
+        "area": 1296,
+        "age": 51,
+        "rent": 50000,
+        "psf": 39,
+        "special_psf": 42.9,
+        "direction": "西南",
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E7%A2%A7%E7%91%B6%E6%B9%BE_BGV202602R1207",
+        "title": "碧瑶湾 40座 高层 40座"
+      }
+    ],
+    "note": null
+  },
+  {
+    "name": "豪峰II",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/Royalton-II_2-SDPPWWPJWS",
+    "records": [],
+    "note": "三年內無租務成交（中原）"
+  },
+  {
+    "name": "美林園（又名美琳苑）",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E7%BE%8E%E7%90%B3%E5%9C%92_1-TITNZHTXHT",
+    "records": [],
+    "note": "三年內無租務成交（中原）"
+  },
+  {
+    "name": "Victoria Coast",
+    "list_url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/-Victoria%20Coast_2-SDPPWWPOWS",
+    "records": [
+      {
+        "date": "2025-03-01",
+        "block": "B座",
+        "floor": "低層",
+        "unit_no": "1室",
+        "layout": "2房",
+        "area": 1356,
+        "age": 37,
+        "rent": 51000,
+        "psf": 38,
+        "special_psf": 41.8,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/Victoria-Coast_TBL202501R1461",
+        "title": "Victoria Coast B座 低层 1室"
+      },
+      {
+        "date": "2024-07-15",
+        "block": "B座",
+        "floor": "低層",
+        "unit_no": "1室",
+        "layout": "2房",
+        "area": 1356,
+        "age": 37,
+        "rent": 51000,
+        "psf": 38,
+        "special_psf": 41.8,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/Victoria-Coast_MCY202405R0854",
+        "title": "Victoria Coast B座 低层 1室"
+      },
+      {
+        "date": "2024-07-01",
+        "block": "B座",
+        "floor": "中層",
+        "unit_no": "2室",
+        "layout": "3房",
+        "area": 1356,
+        "age": 37,
+        "rent": 57000,
+        "psf": 42,
+        "special_psf": 46.2,
+        "direction": null,
+        "url": "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/Victoria-Coast_KOL202406R0925",
+        "title": "Victoria Coast B座 中层 2室"
+      }
+    ],
+    "note": null
+  }
+]

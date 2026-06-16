@@ -1,0 +1,86 @@
+{
+  "吉喆": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E5%90%89%E5%96%86_2-SSSPWWPSWS",
+    "rent_ids": [
+      "STT202603R0495",
+      "STT202512R1554"
+    ],
+    "paths": [],
+    "rent_count": 2
+  },
+  "翰林峰": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E7%BF%B0%E6%9E%97%E5%B3%B0_2-SSPPWWPOWG",
+    "rent_ids": [
+      "SYA202605R1174",
+      "SGC202605R0952",
+      "SMM202605R0955",
+      "SYA202605R0970",
+      "CAN202605R0161",
+      "HKW202605R0460",
+      "CEO202604R0856"
+    ],
+    "paths": [],
+    "rent_count": 7
+  },
+  "Kennedy 38": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/KENNEDY%2038_2-SSSPWWPVWS",
+    "rent_ids": [
+      "SAW202606R0140",
+      "SMM202604R0080",
+      "SYA202603R2099",
+      "CDB202603R1767"
+    ],
+    "paths": [],
+    "rent_count": 4
+  },
+  "嘉林閣": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E5%98%89%E6%9E%97%E9%96%A3_2-SDBBPPKJPS",
+    "rent_ids": [],
+    "paths": [],
+    "rent_count": 0
+  },
+  "碧瑤灣": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E7%A2%A7%E7%91%B6%E6%B9%BE_2-OJQCFRCORO?q=udjgk03it5jzb",
+    "rent_ids": [
+      "BGV202602R1207",
+      "BGV202603R1294",
+      "TGP202603R1804",
+      "TBL202602R0177",
+      "RMB202601R0656",
+      "BGV202512R0548",
+      "SGC202601R1131",
+      "BGV202512R0462",
+      "SOT202510R1112",
+      "BGV202511R0048",
+      "BGV202509R0928",
+      "BGV202509R1608",
+      "BGV202508R2593",
+      "BGV202507R0672",
+      "ABM202507R2273"
+    ],
+    "paths": [],
+    "rent_count": 17
+  },
+  "Victoria Coast": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/-Victoria%20Coast_2-SDPPWWPOWS",
+    "rent_ids": [
+      "TBL202501R1461",
+      "MCY202405R0854",
+      "KOL202406R0925"
+    ],
+    "paths": [],
+    "rent_count": 3
+  },
+  "豪峰II": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/Royalton-II_2-SDPPWWPJWS",
+    "rent_ids": [],
+    "paths": [],
+    "rent_count": 0
+  },
+  "美林園": {
+    "url": "https://hk.centanet.com/findproperty/zh-cn/list/transaction/%E7%BE%8E%E7%90%B3%E5%9C%92_1-TITNZHTXHT",
+    "rent_ids": [],
+    "paths": [],
+    "rent_count": 0
+  }
+}

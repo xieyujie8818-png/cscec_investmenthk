@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>大埔黃宜坳周邊12個可比屋苑</name>
+    <description>大埔黃宜坳第一期高尚住宅 · 周邊可比屋苑位置標註</description>
+    <Style id="pin"><IconStyle><scale>1.1</scale><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+    <Placemark><name>1. 大埔寶馬山 Pacific Palisades</name><description>山賢路8號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.17233,22.44235,0</coordinates></Point></Placemark>
+    <Placemark><name>2. 雍怡雅苑 Chateau Royale</name><description>雍宜路1號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.17120,22.44180,0</coordinates></Point></Placemark>
+    <Placemark><name>3. 泓山 The Cavaridge</name><description>逸遙路3號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.18180,22.43650,0</coordinates></Point></Placemark>
+    <Placemark><name>4. 天鑽 The Regent</name><description>山塘路8號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.16667,22.43694,0</coordinates></Point></Placemark>
+    <Placemark><name>5. 悠然山莊 The Paragon</name><description>山賢路9號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.17280,22.44210,0</coordinates></Point></Placemark>
+    <Placemark><name>6. 偉東·雍宜山莊 Grand Dynasty View</name><description>下黃宜坳</description><styleUrl>#pin</styleUrl><Point><coordinates>114.17450,22.44320,0</coordinates></Point></Placemark>
+    <Placemark><name>7. 叠翠豪庭 The Paramount</name><description>大埔公路大埔滘段4188號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.18350,22.43380,0</coordinates></Point></Placemark>
+    <Placemark><name>8. 峰林 The Peak</name><description>大埔公路大埔滘段4135號（峰林軒）</description><styleUrl>#pin</styleUrl><Point><coordinates>114.18400,22.43420,0</coordinates></Point></Placemark>
+    <Placemark><name>9. 史提福樓 Stafford House</name><description>大埔公路4130號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.18430,22.43450,0</coordinates></Point></Placemark>
+    <Placemark><name>10. 逍遥雋岸 The Gables</name><description>逸遙路18號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.18220,22.43620,0</coordinates></Point></Placemark>
+    <Placemark><name>11. 翡翠花園 Savanna Garden</name><description>大埔公路大埔滘段4283號</description><styleUrl>#pin</styleUrl><Point><coordinates>114.18650,22.43250,0</coordinates></Point></Placemark>
+    <Placemark><name>12. 僑東·羅宜山莊 Kiu Tung Lo Yee Villa</name><description>大埔滘羅宜路</description><styleUrl>#pin</styleUrl><Point><coordinates>114.17080,22.44050,0</coordinates></Point></Placemark>
+  </Document>
+</kml>

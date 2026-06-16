@@ -1,0 +1,142 @@
+{
+  "大埔寶馬山": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E5%A4%A7%E5%9F%94%E5%AF%B6%E9%A6%AC%E5%B1%B1-E11504；中原：https://hk.centanet.com/findproperty/list/transaction/%E5%A4%A7%E5%9F%94%E5%AF%B6%E9%A6%AC%E5%B1%B1_2-DCRVURVXRO",
+    "sale_count": 5,
+    "sale_psf_rng": "10,038 – 11,376",
+    "sale_psf_avg": "10,657",
+    "rent_rng": "18,000 – 30,000",
+    "rent_psf_rng": "32",
+    "rent_dtype": "屋苑放盤參考",
+    "note": ""
+  },
+  "雍怡雅苑": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/property/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E9%9B%8D%E6%80%A1%E9%9B%85%E8%8B%91%E9%9B%8D%E6%97%A5%E5%BA%AD%E9%9B%8D%E5%AE%9C%E8%B7%AF1%E8%99%9F-%E7%8D%A8%E7%AB%8B%E5%B1%8B-M300300767；中原：https://hk.centanet.com/findproperty/list/transaction/%E9%9B%8D%E6%80%A1%E9%9B%85%E8%8B%91_2-DCRVURVXRO",
+    "sale_count": 0,
+    "sale_psf_rng": "—",
+    "sale_psf_avg": "—",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無二手成交；近90日無租務成交／放盤參考；成交可參考中原連結"
+  },
+  "泓山": {
+    "source": "中原：https://hk.centanet.com/findproperty/list/transaction/%E6%B3%93%E5%B1%B1_2-DCRVURVXRO",
+    "sale_count": 0,
+    "sale_psf_rng": "—",
+    "sale_psf_avg": "—",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無二手成交；美聯無租務數據，建議查中原"
+  },
+  "天鑽": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E5%A4%A9%E9%91%BD-E000016716；中原：https://hk.centanet.com/findproperty/list/transaction/%E5%A4%A9%E9%91%BD_2-DEPPWPPJPB",
+    "sale_count": 16,
+    "sale_psf_rng": "11,559 – 15,011",
+    "sale_psf_avg": "13,068",
+    "rent_rng": "20,000 – 30,000",
+    "rent_psf_rng": "37 – 47",
+    "rent_dtype": "租務成交",
+    "note": ""
+  },
+  "悠然山莊": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E6%82%A0%E7%84%B6%E5%B1%B1%E8%8E%8A-E11584；中原：https://hk.centanet.com/findproperty/list/transaction/%E6%82%A0%E7%84%B6%E5%B1%B1%E8%8E%8A_2-DCRVURVXRO",
+    "sale_count": 2,
+    "sale_psf_rng": "9,069 – 9,497",
+    "sale_psf_avg": "9,283",
+    "rent_rng": "36,000",
+    "rent_psf_rng": "29",
+    "rent_dtype": "屋苑放盤參考",
+    "note": ""
+  },
+  "偉東·雍宜山莊": {
+    "source": "—",
+    "sale_count": 0,
+    "sale_psf_rng": "—",
+    "sale_psf_avg": "—",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無二手成交；近90日無租務成交／放盤參考"
+  },
+  "疊翠豪庭": {
+    "source": "—",
+    "sale_count": 0,
+    "sale_psf_rng": "—",
+    "sale_psf_avg": "—",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無二手成交；近90日無租務成交／放盤參考"
+  },
+  "峰林軒": {
+    "source": "—",
+    "sale_count": 0,
+    "sale_psf_rng": "—",
+    "sale_psf_avg": "—",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無二手成交；近90日無租務成交／放盤參考"
+  },
+  "史提福樓": {
+    "source": "—",
+    "sale_count": 0,
+    "sale_psf_rng": "—",
+    "sale_psf_avg": "—",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無二手成交；近90日無租務成交／放盤參考"
+  },
+  "逍遙雋岸": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E9%80%8D%E9%81%99%E9%9B%8B%E5%B2%B8-E000004058；中原：https://hk.centanet.com/findproperty/list/transaction/%E9%80%8D%E9%81%99%E9%9B%8B%E5%B2%B8_2-DCRVURVXRO",
+    "sale_count": 0,
+    "sale_psf_rng": "—",
+    "sale_psf_avg": "—",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無二手成交；近90日無租務成交／放盤參考；成交可參考中原連結"
+  },
+  "翡翠花園": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E7%BF%A1%E7%BF%A0%E8%8A%B1%E5%9C%92-E00070；中原：https://hk.centanet.com/findproperty/list/transaction/%E7%BF%A1%E7%BF%A0%E8%8A%B1%E5%9C%92_2-DCRVURVXRO",
+    "sale_count": 2,
+    "sale_psf_rng": "9,518 – 13,840",
+    "sale_psf_avg": "12,433",
+    "rent_rng": "28,500 – 40,000",
+    "rent_psf_rng": "33",
+    "rent_dtype": "屋苑放盤參考",
+    "note": ""
+  },
+  "盈峰翠邸": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/property/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E7%9B%88%E5%B3%B0%E7%BF%A0%E9%82%B802%E5%BA%A7%E4%B8%AD%E5%B1%A4B%E5%AE%A4-M300551705；中原：https://hk.centanet.com/findproperty/list/transaction/%E7%9B%88%E5%B3%B0%E7%BF%A0%E9%82%B8_2-DCRVURVXRO",
+    "sale_count": 1,
+    "sale_psf_rng": "9,279",
+    "sale_psf_avg": "9,279",
+    "rent_rng": "—",
+    "rent_psf_rng": "—",
+    "rent_dtype": "—",
+    "note": "近90日無租務成交／放盤參考"
+  },
+  "雲滙": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E7%99%BD%E7%9F%B3%E8%A7%92-%E9%9B%B2%E6%BB%99-E000016471；中原：https://hk.centanet.com/findproperty/list/transaction/%E9%9B%B2%E6%BB%99_3-DESPWPPHPW",
+    "sale_count": 10,
+    "sale_psf_rng": "11,911 – 15,647",
+    "sale_psf_avg": "14,593",
+    "rent_rng": "13,000 – 59,000",
+    "rent_psf_rng": "43",
+    "rent_dtype": "屋苑放盤參考",
+    "note": ""
+  },
+  "海日灣II": {
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E7%99%BD%E7%9F%B3%E8%A7%92-%E6%B5%B7%E6%97%A5%E7%81%A3II-E000016718；中原：https://hk.centanet.com/findproperty/list/transaction/%E6%B5%B7%E6%97%A5%E7%81%A3II_2-DEPPWPPJPB",
+    "sale_count": 8,
+    "sale_psf_rng": "13,180 – 15,830",
+    "sale_psf_avg": "14,371",
+    "rent_rng": "12,300 – 50,000",
+    "rent_psf_rng": "46",
+    "rent_dtype": "屋苑放盤參考",
+    "note": ""
+  }
+}

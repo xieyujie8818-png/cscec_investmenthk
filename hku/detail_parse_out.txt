@@ -1,0 +1,13 @@
+﻿成交日期 '成交日期：2026-05-01\n                </div></div></figure> <!----> <!----> <!----> <d'
+出租价 '出租价</div></div> <div class="price-value" data-v-19f8f492><div class="price-numbe'
+python : Traceback (most recent call last):
+位於 C:\Users\yujie.xie\AppData\Local\Temp\ps-script-ea59761f-e03f-45a6-a841-1a07a4998172.ps1:111 字元:83
++ ... ojects.py"; python "C:\Users\yujie.xie\.cursor\cohl-marketing\hku\par ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\yujie.xie\.cursor\cohl-marketing\hku\parse_centanet_detail.py", line 14, in <module>
+    print(label, repr(html[i : i + 80]))
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'cp950' codec can't encode character '\u5b9e' in position 0: illegal multibyte sequence

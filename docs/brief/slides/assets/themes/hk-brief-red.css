@@ -1,0 +1,69 @@
+/* theme: hk-brief-red — 香港簡訊紅白播報風（基於 news-broadcast，品牌色 #c8102e） */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #faf5f6;
+  --surface: #ffffff;
+  --surface-2: #f5e8eb;
+  --border: rgba(200, 16, 46, 0.18);
+  --border-strong: #c8102e;
+  --text-1: #1a1a1a;
+  --text-2: #444444;
+  --text-3: #777777;
+  --accent: #c8102e;
+  --accent-2: #9b0c24;
+  --accent-3: #ffffff;
+  --good: #0e7c3a;
+  --warn: #b8860b;
+  --bad: #c8102e;
+  --grad: linear-gradient(90deg, #c8102e 0%, #9b0c24 100%);
+  --grad-soft: linear-gradient(135deg, #fde8ec, #ffffff);
+  --radius: 4px;
+  --radius-sm: 2px;
+  --radius-lg: 6px;
+  --shadow: 0 2px 12px rgba(200, 16, 46, 0.08);
+  --shadow-lg: 0 4px 0 var(--accent);
+  --font-sans: "Microsoft YaHei", "PingFang TC", "Noto Sans SC", "Inter", sans-serif;
+  --font-display: "Microsoft YaHei", "PingFang TC", "Noto Sans SC", sans-serif;
+}
+
+h1.title, h2.title, .h1, .h2 {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.kicker {
+  background: var(--accent);
+  color: #fff;
+  padding: 4px 12px;
+  display: inline-block;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  border-radius: 0;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--accent);
+  z-index: 3;
+}
+
+.card {
+  border: 1px solid var(--border);
+  box-shadow: none;
+  border-left: 3px solid var(--accent);
+}
+
+.divider-accent {
+  background: var(--accent);
+  height: 4px;
+  width: 100%;
+}
+
+.progress-bar > span {
+  background: var(--accent);
+}

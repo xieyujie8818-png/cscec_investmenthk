@@ -1,0 +1,27 @@
+source_name,url,region,category,credibility,update_frequency,monitoring_focus,owner,status,notes
+
+
+
+HKET 要聞列表,https://paper.hket.com/srap001/%E8%A6%81%E8%81%9E?dis=YYYYMMDD,香港,綜合要聞,A,每日,"金融與經濟;政策;宏觀",待分配,active,日報系統自動採集
+
+
+
+HKET 地產列表,https://paper.hket.com/srap007/%E5%9C%B0%E7%94%A2?dis=YYYYMMDD,香港,地產版,A,每日,"建築與地產;新盤;成交;北都",待分配,active,日報系統自動採集
+
+
+
+HKET 即時新聞,https://inews.hket.com/sran001/%E5%85%A8%E9%83%A8,香港,即時要聞,A,每日,"宏觀;政策;地產快訊",待分配,active,僅標題過關才抓正文
+
+
+
+HKET article 正文,https://paper.hket.com/article/,香港,會員文章正文,A,每日,由列表頁點入,待分配,active,列表內鏈正文
+
+
+
+HKET 地產站（人工補充）,https://ps.hket.com/?mtc=70058,香港,本地地產新聞,A,每日,查漏,待分配,active,非系統默認；缺稿時人工使用
+
+
+
+HKET 站內搜索（人工補充）,https://service.hket.com/search/result?dis=basic&keyword=,香港,搜索,B,按需,查漏,待分配,active,非系統默認
+
+

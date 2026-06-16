@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>香港簡訊 · 日報系統 v2</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <h1>香港簡訊 · 日報系統 v2</h1>
+    <p>工作流：抓取候選 → 人工審核 → 生成 Markdown 定稿</p>
+
+    {% if not playwright_ok %}
+    <div class="card" style="border-color:#b45309;background:#fffbeb">
+      <h2 style="color:#b45309">Playwright 尚未就緒</h2>
+      <p>請安裝 <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe" target="_blank">VC++ Redistributable x64</a> 後重啟。</p>
+      <p style="font-size:0.85rem">{{ playwright_error }}</p>
+    </div>
+    {% endif %}
+
+    <div class="card">
+      <h2>① 登入報社（首次）</h2>
+      <p>Cookie 存於 <code>data/browser_profiles/</code>；帳密可填 <code>.env</code></p>
+      {% for sid, src in sources.items() %}
+      <button class="btn btn-secondary" onclick="login('{{ sid }}')">登入 {{ src.name }}</button>
+      {% if src.requires_login %}
+      <button class="btn btn-secondary" onclick="loginDone('{{ sid }}')">完成登入 {{ src.name }}</button>
+      {% endif %}
+      {% endfor %}
+      <p class="hint" style="font-size:0.85rem;color:#666;margin-top:0.5rem">
+        HKET／明報：登入後可点「完成登入」释放 profile，或直接开始抓取（将复用登入窗口）。抓取中请勿关闭弹出的 Chrome。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>② 抓取候選</h2>
+      <label>起始日期 <input type="date" id="dateStart" /></label>
+      <label style="margin-left:1rem">結束日期 <input type="date" id="dateEnd" /></label>
+      <button class="btn" id="btnFetch" onclick="fetchCandidates()">抓取候選池</button>
+      <button class="btn btn-secondary" id="btnPause" onclick="pauseFetch()" style="display:none">暫停</button>
+      <button class="btn" id="btnResume" onclick="resumeFetch()" style="display:none">繼續</button>
+      <p class="hint" style="font-size:0.9rem;color:#666;margin-top:0.5rem">
+        可選日期範圍（如 6/13–6/15），系統抓取後 **去重匯總為同一份候選池與定稿**；目錄名為結束日或 <code>起始_結束</code>。
+      </p>
+      <div id="progressWrap" class="progress-wrap" style="display:none">
+        <progress id="fetchProgress" value="0" max="100"></progress>
+        <p id="progressStage" class="progress-stage"></p>
+        <p id="pauseBanner" class="pause-banner" style="display:none"></p>
+        <div id="sourceProgress" class="source-progress">
+          {% for sid, src in sources.items() %}
+          <div class="source-row" data-source="{{ sid }}">
+            <span class="source-icon" aria-hidden="true">○</span>
+            <span class="source-name">{{ src.name }}</span>
+            <span class="source-detail">待抓取</span>
+            <span class="source-count"></span>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <p id="statusMsg">{% if job_status.message %}<span class="status-ok">{{ job_status.message }}</span>{% endif %}</p>
+    </div>
+
+    <div class="card">
+      <h2>③ 審核候選 / 生成定稿</h2>
+      <p>抓取完成後進入候選池審核，勾選後生成 <code>daily-brief.md</code> / <code>.html</code> / <code>.docx</code></p>
+      <button class="btn" onclick="goCandidates()">打開候選池審核</button>
+    </div>
+
+    <div class="card">
+      <h2>④ 已產出日期</h2>
+      {% if dates %}
+      <ul>
+        {% for d in dates %}
+        <li>
+          <strong>{{ d }}</strong>
+          — <a href="/candidates/{{ d }}">候選池</a>
+          · <a href="/report/{{ d }}/brief" target="_blank">Markdown</a>
+          · <a href="/report/{{ d }}/brief.html" target="_blank">HTML</a>
+          · <a href="/report/{{ d }}/brief.docx" target="_blank">Word</a>
+          · <a href="/report/{{ d }}/feishu" target="_blank">飛書</a>
+          · <a href="/report/{{ d }}/monthly" target="_blank">月報</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>尚無產出。</p>
+      {% endif %}
+    </div>
+
+    <div class="card">
+      <h2>選題規則</h2>
+      <p>定稿建議 <strong>{{ selection_rules.get('target_total_min', 15) }}–{{ selection_rules.get('target_total_max', 20) }}</strong> 條；
+        評分 ≥{{ selection_rules.get('min_total_score', 70) }}；去重。
+        欄目參考：金融 {{ quotas.get('金融與經濟', 5) }} · 地產 {{ quotas.get('建築與地產', 10) }} · 北都 {{ quotas.get('北都專題', 2) }}（軟性指引）。</p>
+    </div>
+  </div>
+  <script>
+    const today = new Date().toISOString().slice(0, 10);
+    const elStart = document.getElementById('dateStart');
+    const elEnd = document.getElementById('dateEnd');
+    if (!elStart.value) elStart.value = today;
+    if (!elEnd.value) elEnd.value = today;
+    async function login(id) {
+      const r = await fetch(`/api/login/${id}`, { method: 'POST' });
+      alert((await r.json()).message);
+    }
+    async function loginDone(id) {
+      const r = await fetch(`/api/login/${id}/done`, { method: 'POST' });
+      const j = await r.json();
+      alert(j.message || (r.ok ? '已释放 profile' : '失败'));
+    }
+    function dateEndQ() {
+      return document.getElementById('dateEnd').value || today;
+    }
+    function dateRangeQ() {
+      let ds = document.getElementById('dateStart').value || today;
+      let de = document.getElementById('dateEnd').value || ds;
+      if (ds > de) { const t = ds; ds = de; de = t; }
+      return { date_start: ds, date_end: de };
+    }
+    let pauseAlertShown = false;
+
+    function setFetchControls(running, paused) {
+      document.getElementById('btnFetch').disabled = running;
+      document.getElementById('btnPause').style.display = running && !paused ? 'inline-block' : 'none';
+      document.getElementById('btnResume').style.display = running && paused ? 'inline-block' : 'none';
+    }
+
+    async function pauseFetch() {
+      const r = await fetch('/api/fetch-pause', { method: 'POST' });
+      const j = await r.json();
+      if (!r.ok) { alert(j.detail || '暫停失敗'); return; }
+      document.getElementById('pauseBanner').style.display = 'block';
+      document.getElementById('pauseBanner').textContent = j.message || '已暫停';
+      setFetchControls(true, true);
+    }
+
+    async function resumeFetch() {
+      const r = await fetch('/api/fetch-resume', { method: 'POST' });
+      const j = await r.json();
+      if (!r.ok) { alert(j.detail || '繼續失敗'); return; }
+      document.getElementById('pauseBanner').style.display = 'none';
+      pauseAlertShown = false;
+      setFetchControls(true, false);
+      document.getElementById('statusMsg').innerHTML = '<span class="status-warn">抓取中…</span>';
+    }
+
+    async function fetchCandidates() {
+      if ('Notification' in window && Notification.permission === 'default') {
+        Notification.requestPermission();
+      }
+      pauseAlertShown = false;
+      setFetchControls(true, false);
+      document.getElementById('statusMsg').innerHTML = '<span class="status-warn">抓取中…</span>';
+      document.getElementById('progressWrap').style.display = 'block';
+      document.getElementById('pauseBanner').style.display = 'none';
+      document.getElementById('fetchProgress').value = 0;
+      document.getElementById('progressStage').textContent = '啟動中…';
+      document.querySelectorAll('.source-row').forEach(row => {
+        row.className = 'source-row status-pending';
+        row.querySelector('.source-icon').textContent = '○';
+        row.querySelector('.source-detail').textContent = '待抓取';
+        row.querySelector('.source-count').textContent = '';
+      });
+      const { date_start, date_end } = dateRangeQ();
+      await fetch(
+        `/api/fetch-candidates?date_start=${date_start}&date_end=${date_end}`,
+        { method: 'POST' }
+      );
+      await poll('fetch');
+      setFetchControls(false, false);
+    }
+    function reportKeyQ() {
+      let ds = document.getElementById('dateStart').value || today;
+      let de = document.getElementById('dateEnd').value || ds;
+      if (ds > de) { const t = ds; ds = de; de = t; }
+      return ds === de ? de : `${ds}_${de}`;
+    }
+    function goCandidates() {
+      location.href = `/candidates/${reportKeyQ()}`;
+    }
+    function notifyDone(job) {
+      const msg = job.message || '抓取完成';
+      alert('抓取完成！\n' + msg);
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification('香港簡訊 · 抓取完成', { body: msg });
+      }
+    }
+    const SOURCE_ICONS = {
+      pending: '○',
+      running: '◉',
+      done: '✓',
+      error: '✕',
+      login_required: '🔒',
+      skipped: '—',
+    };
+    function updateSourceRows(sources) {
+      if (!sources) return;
+      for (const [sid, info] of Object.entries(sources)) {
+        const row = document.querySelector(`.source-row[data-source="${sid}"]`);
+        if (!row) continue;
+        const st = info.status || 'pending';
+        row.className = 'source-row status-' + st;
+        row.querySelector('.source-icon').textContent = SOURCE_ICONS[st] || '○';
+        row.querySelector('.source-detail').textContent = info.detail || (
+          st === 'pending' ? '待抓取' : st === 'running' ? '進行中…' : ''
+        );
+        const countEl = row.querySelector('.source-count');
+        if (st === 'done' && info.articles != null) {
+          countEl.textContent = info.articles + ' 篇';
+        } else if (st === 'login_required') {
+          countEl.textContent = '需登入';
+        } else if (st === 'error') {
+          countEl.textContent = '';
+        } else {
+          countEl.textContent = '';
+        }
+      }
+    }
+    async function poll(expectedAction) {
+      const bar = document.getElementById('fetchProgress');
+      const stage = document.getElementById('progressStage');
+      const wrap = document.getElementById('progressWrap');
+      const pauseBanner = document.getElementById('pauseBanner');
+      for (let i = 0; i < 720; i++) {
+        await new Promise(r => setTimeout(r, 1500));
+        const j = await (await fetch('/api/status')).json();
+        const job = j.job;
+        if (job.running && (!expectedAction || job.action === expectedAction)) {
+          const pct = job.progress || 0;
+          bar.value = pct;
+          const detail = job.detail ? ' — ' + job.detail : '';
+          const paused = !!job.paused;
+          stage.textContent = (paused ? '⏸ 已暫停 · ' : '') + pct + '% · ' + (job.stage || '處理中') + detail;
+          updateSourceRows(job.sources);
+          setFetchControls(true, paused);
+          if (paused) {
+            const reason = job.pause_reason || job.detail || '抓取已暫停';
+            pauseBanner.style.display = 'block';
+            pauseBanner.textContent = reason;
+            document.getElementById('statusMsg').innerHTML =
+              '<span class="status-warn">' + reason + '</span>';
+            if (!pauseAlertShown && reason.includes('登入')) {
+              pauseAlertShown = true;
+              alert('抓取已暫停\n\n' + reason + '\n\n請先登入對應報社，再按「繼續」。');
+            }
+          } else {
+            pauseBanner.style.display = 'none';
+          }
+          continue;
+        }
+        if (!job.running) {
+          updateSourceRows(job.sources);
+          wrap.style.display = 'none';
+          pauseBanner.style.display = 'none';
+          if (job.action === 'fetch' || job.action === expectedAction) {
+            if (job.success === false) {
+              document.getElementById('statusMsg').innerHTML =
+                '<span class="status-warn">' + job.message + '</span>';
+              alert('抓取失敗：' + job.message);
+            } else if (job.message && job.message.includes('完成')) {
+              document.getElementById('statusMsg').innerHTML =
+                '<span class="status-ok">' + job.message + '</span>';
+              notifyDone(job);
+              location.reload();
+            } else {
+              document.getElementById('statusMsg').innerHTML =
+                '<span class="status-ok">' + (job.message || '完成') + '</span>';
+            }
+          }
+          return;
+        }
+      }
+      wrap.style.display = 'none';
+      document.getElementById('statusMsg').innerHTML =
+        '<span class="status-warn">逾時，請刷新頁面查看狀態</span>';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "1",
+    "name": "Pacific Palisades",
+    "addr": "8 Shan Yin Road, Tai Po, Hong Kong",
+    "lat": 22.4423479,
+    "lng": 114.1723322
+  },
+  {
+    "id": "2",
+    "name": "Chateau Royale",
+    "addr": "1 Chung Yee Road, Tai Po, Hong Kong",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "3",
+    "name": "The Cavaridge",
+    "addr": "3 Yat Yiu Road, Tai Po, Hong Kong",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "4",
+    "name": "The Regent",
+    "addr": "1 Chong San Road, Tai Po, Hong Kong",
+    "lat": 22.4232927,
+    "lng": 114.2133444
+  },
+  {
+    "id": "5",
+    "name": "The Paragon",
+    "addr": "9 Shan Yin Road, Tai Po, Hong Kong",
+    "lat": 22.4423479,
+    "lng": 114.1723322
+  },
+  {
+    "id": "6",
+    "name": "Grand Dynasty View",
+    "addr": "201 Ha Wong Yi Au, Tai Po, Hong Kong",
+    "lat": 22.4424224,
+    "lng": 114.1743384
+  },
+  {
+    "id": "7",
+    "name": "The Paramount",
+    "addr": "4188 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4340869,
+    "lng": 114.1843534
+  },
+  {
+    "id": "8",
+    "name": "The Peak",
+    "addr": "4135 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4340869,
+    "lng": 114.1843534
+  },
+  {
+    "id": "9",
+    "name": "Stafford House",
+    "addr": "4130 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4340869,
+    "lng": 114.1843534
+  },
+  {
+    "id": "10",
+    "name": "The Gables",
+    "addr": "18 Yat Yiu Road, Tai Po Kau, Hong Kong",
+    "lat": null,
+    "lng": null
+  },
+  {
+    "id": "11",
+    "name": "Savanna Garden",
+    "addr": "4283 Tai Po Road, Tai Po Kau, Hong Kong",
+    "lat": 22.4340869,
+    "lng": 114.1843534
+  },
+  {
+    "id": "12",
+    "name": "Kiu Tung Lo Yee Villa",
+    "addr": "Lo Yee Road, Tai Po Kau, Hong Kong",
+    "lat": 22.3384378,
+    "lng": 114.2027356
+  }
+]

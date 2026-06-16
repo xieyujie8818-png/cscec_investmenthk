@@ -1,0 +1,191 @@
+[
+  {
+    "name": "吉喆",
+    "year": 2025,
+    "studio": {
+      "area": "220–297",
+      "rent": "18,500–20,500",
+      "psf": "69–84",
+      "count": 2
+    },
+    "one": {
+      "area": "370–385",
+      "rent": "25,000–27,000",
+      "psf": "68–73",
+      "count": 5
+    },
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E5%90%89%E5%96%86-E-E000019385?tx_type=L"
+  },
+  {
+    "name": "Eight South Lane",
+    "year": 2015,
+    "studio": {
+      "area": "283",
+      "rent": "17,500",
+      "psf": "62",
+      "count": 1
+    },
+    "one": null,
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/Eight-South-Lane-E-E000015221?tx_type=L"
+  },
+  {
+    "name": "藝里坊．1號",
+    "year": 2019,
+    "studio": {
+      "area": "230",
+      "rent": "16,500",
+      "psf": "72",
+      "count": 1
+    },
+    "one": {
+      "area": "253",
+      "rent": "19,000",
+      "psf": "75",
+      "count": 1
+    },
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E8%97%9D%E9%87%8C%E5%9D%8A-1%E8%99%9F-E-E000016617?tx_type=L"
+  },
+  {
+    "name": "翰林峰",
+    "year": 2019,
+    "studio": {
+      "area": "230",
+      "rent": "18,000–18,500",
+      "psf": "78–80",
+      "count": 2
+    },
+    "one": {
+      "area": "294",
+      "rent": "22,500",
+      "psf": "77",
+      "count": 1
+    },
+    "two": {
+      "area": "540–551",
+      "rent": "35,000–38,000",
+      "psf": "64–70",
+      "count": 2
+    },
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E7%BF%B0%E6%9E%97%E5%B3%B0-E-E000015984?tx_type=L"
+  },
+  {
+    "name": "曉譽",
+    "year": 2014,
+    "studio": null,
+    "one": {
+      "area": "293–524",
+      "rent": "19,000–29,000",
+      "psf": "52–65",
+      "count": 3
+    },
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E6%9B%89%E8%AD%BD-E-E000014006?tx_type=L"
+  },
+  {
+    "name": "尚瓏",
+    "year": 2022,
+    "studio": null,
+    "one": {
+      "area": "266",
+      "rent": "20,500",
+      "psf": "77",
+      "count": 1
+    },
+    "two": {
+      "area": "431",
+      "rent": "33,000",
+      "psf": "77",
+      "count": 1
+    },
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E5%B0%9A%E7%93%8F-E-E000017130?tx_type=L"
+  },
+  {
+    "name": "懿山",
+    "year": 2014,
+    "studio": null,
+    "one": null,
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E6%87%BF%E5%B1%B1-E-E000013810?tx_type=L"
+  },
+  {
+    "name": "瑧蓺",
+    "year": 2018,
+    "studio": {
+      "area": "222",
+      "rent": "17,500",
+      "psf": "79",
+      "count": 1
+    },
+    "one": null,
+    "two": {
+      "area": "462",
+      "rent": "30,800–31,500",
+      "psf": "67–68",
+      "count": 2
+    },
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E7%91%A7%E8%93%BA-E-E000016134?tx_type=L"
+  },
+  {
+    "name": "高士台",
+    "year": 2016,
+    "studio": null,
+    "one": null,
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/Kensington-Hill-E-E000015321?tx_type=L"
+  },
+  {
+    "name": "63 Pokfulam",
+    "year": 2020,
+    "studio": null,
+    "one": {
+      "area": "310",
+      "rent": "21,000",
+      "psf": "68",
+      "count": 1
+    },
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/63-Pokfulam-E-E000016034?tx_type=L"
+  },
+  {
+    "name": "Kennedy 38",
+    "year": 2020,
+    "studio": null,
+    "one": {
+      "area": "377",
+      "rent": "16,500",
+      "psf": "44",
+      "count": 1
+    },
+    "two": {
+      "area": "457–525",
+      "rent": "19,000–21,000",
+      "psf": "40–42",
+      "count": 2
+    },
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E5%A4%A9%E9%91%BD-E-E000016716?tx_type=L"
+  },
+  {
+    "name": "藝里坊．2號",
+    "year": 2021,
+    "studio": null,
+    "one": {
+      "area": "252–282",
+      "rent": "19,000–22,000",
+      "psf": "75–78",
+      "count": 2
+    },
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E8%97%9D%E9%87%8C%E5%9D%8A-2%E8%99%9F-E-E000017106?tx_type=L"
+  },
+  {
+    "name": "尚逸",
+    "year": 2026,
+    "studio": null,
+    "one": null,
+    "two": null,
+    "source": "美聯租務成交（近90日）：https://www.midland.com.hk/zh-hk/list/transaction/%E5%B0%9A%E9%80%B8-E-E000019401?tx_type=L"
+  }
+]

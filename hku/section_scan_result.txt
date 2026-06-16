@@ -1,0 +1,132 @@
+Found 10 docx files
+
+================================================================================
+FILE: 1.0 4(i)(a) Corporate Profile (C-Living).docx
+First 10 paragraphs:
+  [0] Corporate Profile
+  [1] C-Living Investment Limited (C-Living) is the subsidiary company under China State Construction International Holding Limited (“CSCI” or the “Group”). C-Living is a new brand, which is to redefine the global standard of student living by building data-driven, wellness-centric residential ecosystems 
+  [2] Corporate History and Our Strength and growth
+  [3] The Group is a renowned comprehensive construction and infrastructure investment enterprise that adopts an integrated model of technology, investment, construction and asset operation, began its construction business in Hong Kong in 1979. Focusing on such key fields as infrastructure investment and 
+  [4] In July 2005, the Group was successfully listed on the main board of the Hong Kong Stock Exchange (stock code: 3311.HK). For more than a decade, the Group's revenue increased from HK$6.86 billion in 2005 to HK$ 115.11 billion in 2024, with a compounded annual growth rate of 16 percent. Its net profi
+  [5] Adhering to the corporate spirit of "Integrity, Innovation, Transcendence and Win-win Solution", after more than 40 years of development, CSCI has developed businesses in four major areas, namely the Chinese mainland, Hong Kong, Macao and overseas markets, implemented the technology-empowered strate
+  [6] Over the years, CSCI has established a solid foundation in the construction contracting business of Hong Kong and Macao, actively optimized construction procedures, improved cost-effectiveness, and cooperated with centralized procurement and distribution management systems, enjoying a reputation in 
+  [7] Engineering Strength
+  [8] Our extensive company history and versatile execution skills provide significant benefits for both the delivery and long-term management of the student accommodation renovation project. As a premier general contractor with deep roots in Hong Kong's built environment, China State Construction Enginee
+  [9] Fast-Track Construction Schedule
+================================================================================
+FILE: 1.0 4(i)(b) Job Reference of C-Living.docx
+First 10 paragraphs:
+  [0] Section 4(i)
+  [1] Corporate Profile
+  [2] Section 4(i)(b)
+  [3] Detailed information of not more than 5 job references for each discipline of similar size as the Accommodation
+  [4] 5.0
+  [5] Project Management
+  [6] Project:
+  [7] 21 Valley Road, Ho Man Tin
+  [8] Project Description
+  [9] The redevelopment project is located at 15-21 Valley Road, Ho Man Tin, is built upon a 3,900-square feet and comprises a new 22-story employee residence built over a demolished older structure. The project commenced in mid-2019 by Auspice Investment Limited, a subsidiary of the China State Construct
+================================================================================
+FILE: 1.0 4(ii)(iii) CV of C-Living.docx
+First 10 paragraphs:
+  [0] Section 4(ii) & (iii)
+  [1] Team Structure, Experience and Qualification of the Team
+  [2] 5.0
+  [3] Project Management
+  [4] C-Living Investment Limited
+  [5] Profile
+  [6] C-Living Investment Limited (C-Living) is the subsidiary company under China State Construction International Holding Limited (“CSCI” or the “Group”). C-Living is a new brand, which is to redefine the global standard of student living by building data-driven, wellness-centric residential ecosystems 
+  [7] In this project, C-Living leverages the extensive resources of our Group to integrate the engineering expertise of CSHK with the operational excellence of China Overseas Property Service Limited, ensuring a seamless delivery from renovation to long-term asset management.
+  [8] Relevant Project Reference of Key Team Member - Ko Ka Fai, Jacky
+  [9] 1.2.1 Universities Project
+================================================================================
+FILE: 2.0 4(i)(b)Job Ref of CWN REV 20260602.docx
+First 10 paragraphs:
+  [0] Section 4(i)
+  [1] Corporate Profile
+  [2] Section 4(i)(b)
+  [3] Detailed information of not more than 5 job references for each discipline of similar size as the Accommodation
+  [4] 1.0
+  [5] Architectural Designer
+  [6] Project:
+  [7] Junior Police Officers Married Quarters at Fan Garden
+  [8] Project Description
+  [9] Fan Garden Junior Police Officers' Married Quarters:
+================================================================================
+FILE: 2.0 4(ii)(iii) CV of CWN REV 20260602 (revised by 海投部).docx
+First 10 paragraphs:
+  [0] Section 4(ii) & (iii)
+  [1] Team Structure, Experience and Qualification of the Team
+  [2] 1.0
+  [3] Architectural Designer
+  [4] Company Profile
+  [5] At Chung Wah Nan Architects Ltd, we are committed to delivering exceptional architectural services that reflect our innovative spirit and dedication to quality. Established in 1964, we have consistently shaped the built environment of Hong Kong through our diverse portfolio and expertise.
+  [6] Our Journey
+  [7] Founded by Mr. Chung Wah Nan, our firm began as a private practice and evolved into a partnership with Mr. Alan Fitch in 1970, known as Fitch & Chung. Following Mr. Fitch's retirement in 1995, we rebranded as Chung Wah Nan Architects Ltd, continuing our legacy of excellence and innovation.
+  [8] Directors
+  [9] Wilbert Ching1977 - present, Partner in 1985
+================================================================================
+FILE: 4.0 4(i)(b) Job Ref of BS 20260605.docx
+First 10 paragraphs:
+  [0] Section 4(i)
+  [1] Corporate Profile
+  [2] Section 4(i)(b)
+  [3] Detailed information of not more than 5 job references for each discipline of similar size as the Accommodation
+  [4] 3.0
+  [5] Building Services Engineer
+  [6] Project:
+  [7] "LST Housing"「樂屋」
+  [8] Conversation of Ex-Tsuen Wan Lutheran School forTransitional Housing at Cheung Shan Est., Tsuen Wan, HK
+  [9] Project Description
+================================================================================
+FILE: 4.0 4(ii)(iii) CV of BS 20260605.docx
+First 10 paragraphs:
+  [0] Section 4(ii) & (iii)
+  [1] Team Structure, Experience and Qualification of the Team
+  [2] 3.0
+  [3] Building Service Engineer
+  [4] Company Profile
+  [5] Talent Mechanical & Electrical Engineers, a multi-discipline building services consultancy firm, was founded in 1992 in Hong Kong with a vision of good allocation of human resources to achieve better results.  Through years of hard work, fulfillments of clients' need and high sense of responsibility
+  [6] Talent provides design and site monitoring of all building services, meeting challenge with creative solutions.  We offer a wide range of consultancy service in the area of building services including MVAC, Boiler System, Electrical Service, Plumbing & Drainage System, Vertical Transportation Servic
+  [7] The service provided includes but not be limited to Feasibility Study, Design, Design Audit and Vetting, Project Planning and Management, Cost Planning and Control, Energy Audit and Energy Efficiency Studies.
+  [8] "Whenever new ideas are conceived, it will be done."  That is the origin of "Talent".  Human though is a driving force for the advancement of the society and technology.  After years of operations, we believe that people can be very creative and innovative especially when stimulated, cultivated and 
+  [9] Talent started running a "Scheme-A" training approved by the Hong Kong Institute of Engineers for college graduates in 1996.  This provides a good channel of training people of high caliber for the coming challenge.
+================================================================================
+FILE: 4.0 5(i)(c) BS Design of Talent.docx
+First 10 paragraphs:
+  [0] Section 5(i)
+  [1] The design of the Accommodation, the statutory submissions including the application of all requisite licenses for the execution of the Works and for operating the Accommodation, procurement of materials and lead time, and the execution and completion of the Works, all in accordance with the Agreeme
+  [2] Section 5(i)(c)
+  [3] Layout proposal and configurations for the students’ and the Pastoral Team’s (as defined in the Agreement) bedrooms, other rooms, and facilities in the Accommodation.
+  [4] Section 5(i)(c)
+  [5] 3 – BS Design
+  [6] BS Design
+  [7] The design proposal is based on the proposed building plan and sub-sequence design coordination.  The following building services installations are included in this proposal: -
+  [8] Air conditioning and mechanical ventilation system;
+  [9] Electrical supply and distribution systems, lighting, power, lightning protection, earthing system, security and extra-low voltage system;
+================================================================================
+FILE: 6.0 4(i)(b) Job Ref of COPSL v2.docx
+First 10 paragraphs:
+  [0] Section 4(i)
+  [1] Corporate Profile
+  [2] Section 4(i)(b)
+  [3] Detailed information of not more than 5 job references for each discipline of similar size as the Accommodation
+  [4] 6.0
+  [5] Property Management Services Provider
+  [6] Company Profile
+  [7] China Overseas Holding Limited was established in Hong Kong in June 1979. It is a subsidiary of China State Construction Engineering Corporation Limited, with five listed companies in Hong Kong covering business areas such as real estate development and operation, construction and infrastructure inv
+  [8] World-class Investment, Construction and Operation Service Provider
+  [9] China Overseas Property Service Limited (COPSL), which was established in Hong Kong on December 23, 1986, is a wholly-owned subsidiary of China Overseas Holding Limited  (Code: 2669) and with eight subsidiary companies in the region. We have a heritage of professional property management services pr
+================================================================================
+FILE: 6.0 4(ii)(iii) CV of COPSL v2.docx
+First 10 paragraphs:
+  [0] Section 4(ii) & (iii)
+  [1] Team Structure, Experience and Qualification of the Team
+  [2] 6.0
+  [3] Property Management Services Provider
+  [4] Company Profile
+  [5] China Overseas Holding Limited was established in Hong Kong in June 1979. It is a subsidiary of China State Construction Engineering Corporation Limited, with five listed companies in Hong Kong covering business areas such as real estate development and operation, construction and infrastructure inv
+  [6] World-class Investment, Construction and Operation Service Provider
+  [7] China Overseas Property Service Limited (COPSL), which was established in Hong Kong on December 23, 1986, is a wholly-owned subsidiary of China Overseas Holding Limited  (Code: 2669) and with eight subsidiary companies in the region. We have a heritage of professional property management services pr
+  [8] Our services include but not limited to the following aspects:
+  [9] Security

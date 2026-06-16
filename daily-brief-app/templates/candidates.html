@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>候選池審核 · {{ date }}</title>
+
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <style>
+
+    .section-block { margin-bottom: 1.5rem; }
+
+    .candidate-row {
+
+      border: 1px solid var(--border);
+
+      border-radius: 6px;
+
+      padding: 0.75rem;
+
+      margin-bottom: 0.5rem;
+
+      background: #fff;
+
+    }
+
+    .candidate-row.selected { border-color: var(--accent); background: #f0f7ff; }
+
+    .candidate-row .meta { font-size: 0.85rem; color: var(--muted); }
+
+    .candidate-row .summary { font-size: 0.9rem; margin: 0.35rem 0; color: var(--muted); }
+
+    .quota-warn { color: #b45309; font-weight: 600; }
+
+    .toolbar { margin-bottom: 1rem; }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <h1>候選池審核 · {{ date }}</h1>
+
+    <p><a href="/">← 返回首頁</a></p>
+
+
+
+    {% if not candidates %}
+
+    <div class="card">
+
+      <p>尚無候選數據。請先 <a href="/">返回首頁</a> 點「抓取候選池」。</p>
+
+    </div>
+
+    {% else %}
+
+
+
+    <div class="card toolbar">
+
+      <p>建議定稿 <strong>{{ selection_rules.get('target_total_min', 15) }}–{{ selection_rules.get('target_total_max', 20) }}</strong> 條；
+        評分 ≥{{ selection_rules.get('min_total_score', 70) }}；須去重。
+        欄目參考（軟性）：金融 {{ quotas.get('金融與經濟', 5) }} · 地產 {{ quotas.get('建築與地產', 10) }} · 北都 {{ quotas.get('北都專題', 2) }}</p>
+
+      {% if candidates.date_start and candidates.date_end and candidates.date_start != candidates.date_end %}
+
+      <p style="font-size:0.9rem;color:var(--muted)">日期區間：{{ candidates.date_start }} – {{ candidates.date_end }}（匯總為同一份定稿）</p>
+
+      {% endif %}
+
+      {% if candidates.source_breakdown %}
+
+      <p style="font-size:0.9rem;color:var(--muted)">
+
+        來源：
+
+        {% for sid, src in sources.items() %}
+
+        {% set cnt = candidates.source_breakdown.get(sid, {}) %}
+
+        {% set total = cnt.values() | sum %}
+
+        {{ src.name }} {{ total }}{% if not loop.last %} · {% endif %}
+
+        {% endfor %}
+
+      </p>
+
+      {% endif %}
+
+      <label>篩選來源
+
+        <select id="sourceFilter" onchange="filterBySource()">
+
+          <option value="">全部來源</option>
+
+          {% for sid, src in sources.items() %}
+
+          <option value="{{ sid }}">{{ src.name }}</option>
+
+          {% endfor %}
+
+        </select>
+
+      </label>
+
+      <p id="quotaStatus"></p>
+
+      <button class="btn" onclick="saveSelection()">保存候選選擇</button>
+
+      <button class="btn btn-secondary" onclick="generateBrief()">生成正文定稿</button>
+
+      <span id="actionMsg"></span>
+
+    </div>
+
+
+
+    {% for section_name in ['金融與經濟', '建築與地產', '北都專題'] %}
+
+    <div class="card section-block" data-section="{{ section_name }}">
+
+      <h2>【{{ section_name }}】</h2>
+
+      <div class="candidate-list" id="list-{{ section_name }}">
+
+        {% for item in candidates.sections.get(section_name, []) %}
+
+        <div class="candidate-row" data-id="{{ item.news_id }}" data-source="{{ item.source_id }}">
+
+          <label>
+
+            <input type="checkbox" class="pick" onchange="onPickChange(this)" />
+
+            <strong>{{ item.title }}</strong>
+
+          </label>
+
+          <div class="meta">{{ item.source_name }} · 評分 {{ item.total_score }} · {{ item.publish_date or '' }} · {{ item.news_id }}</div>
+
+          <div class="summary">{{ item.catalog_summary }}</div>
+
+          <a href="{{ item.original_url or item.url }}" target="_blank" rel="noopener">內部查閱原文</a>
+
+          <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.5rem;font-size:0.8rem" onclick="moveRow(this,-1)">↑</button>
+
+          <button type="button" class="btn btn-secondary" style="padding:0.2rem 0.5rem;font-size:0.8rem" onclick="moveRow(this,1)">↓</button>
+
+        </div>
+
+        {% else %}
+
+        <p>本區暫無候選。</p>
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+    {% endfor %}
+
+
+
+    {% endif %}
+
+  </div>
+
+
+
+  <script>
+
+    const DATE = "{{ date }}";
+
+    const QUOTAS = {{ quotas | tojson }};
+
+    const RULES = {{ selection_rules | tojson }};
+
+    const CANDIDATES = {{ candidates | tojson if candidates else 'null' }};
+
+    const SAVED = {{ selection | tojson if selection else 'null' }};
+
+
+
+    const ITEM_MAP = {};
+
+    if (CANDIDATES && CANDIDATES.sections) {
+
+      for (const items of Object.values(CANDIDATES.sections)) {
+
+        items.forEach(i => { ITEM_MAP[i.news_id] = i; });
+
+      }
+
+    }
+
+
+
+    function rowData(row) {
+
+      return ITEM_MAP[row.dataset.id] || {};
+
+    }
+
+
+
+    function applySaved() {
+
+      if (!SAVED || !SAVED.sections) return;
+
+      for (const [sec, items] of Object.entries(SAVED.sections)) {
+
+        const list = document.getElementById('list-' + sec);
+
+        if (!list) continue;
+
+        const order = items.map(i => i.news_id);
+
+        const rows = [...list.querySelectorAll('.candidate-row')];
+
+        order.forEach(id => {
+
+          const row = rows.find(r => r.dataset.id === id);
+
+          if (row) {
+
+            row.querySelector('.pick').checked = true;
+
+            row.classList.add('selected');
+
+            list.appendChild(row);
+
+          }
+
+        });
+
+      }
+
+      updateQuota();
+
+    }
+
+
+
+    function filterBySource() {
+
+      const sid = document.getElementById('sourceFilter').value;
+
+      document.querySelectorAll('.candidate-row').forEach(row => {
+
+        row.style.display = (!sid || row.dataset.source === sid) ? '' : 'none';
+
+      });
+
+    }
+
+
+
+    function onPickChange(cb) {
+
+      cb.closest('.candidate-row').classList.toggle('selected', cb.checked);
+
+      updateQuota();
+
+    }
+
+
+
+    function moveRow(btn, dir) {
+
+      const row = btn.closest('.candidate-row');
+
+      const sib = dir < 0 ? row.previousElementSibling : row.nextElementSibling;
+
+      if (sib) dir < 0 ? row.parentNode.insertBefore(row, sib) : row.parentNode.insertBefore(sib, row);
+
+    }
+
+
+
+    function collectSelection() {
+
+      const sections = {};
+
+      const sectionNames = ['金融與經濟', '建築與地產', '北都專題'];
+
+      for (const sec of sectionNames) {
+
+        const list = document.getElementById('list-' + sec);
+
+        if (!list) continue;
+
+        const picked = [];
+
+        let order = 0;
+
+        list.querySelectorAll('.candidate-row').forEach(row => {
+
+          if (row.querySelector('.pick').checked) {
+
+            const d = rowData(row);
+
+            d.selected = true;
+
+            d.sort_order = order++;
+
+            d.digest_section = sec;
+
+            picked.push(d);
+
+          }
+
+        });
+
+        sections[sec] = picked;
+
+      }
+
+      return { sections };
+
+    }
+
+
+
+    function updateQuota() {
+
+      const sel = collectSelection();
+
+      const total = Object.values(sel.sections).reduce((n, arr) => n + arr.length, 0);
+
+      const minT = RULES.target_total_min || 15;
+
+      const maxT = RULES.target_total_max || 20;
+
+      const msgs = [`總計: ${total} 條（建議 ${minT}–${maxT}）`];
+
+      for (const [sec, ref] of Object.entries(QUOTAS)) {
+
+        const n = (sel.sections[sec] || []).length;
+
+        msgs.push(`${sec}: ${n}（參考 ${ref}）`);
+
+      }
+
+      const el = document.getElementById('quotaStatus');
+
+      el.textContent = msgs.join(' · ');
+
+      el.className = (total < minT || total > maxT) ? 'quota-warn' : 'status-ok';
+
+    }
+
+
+
+    async function saveSelection() {
+
+      const body = collectSelection();
+
+      const r = await fetch(`/api/candidates/${DATE}/selection`, {
+
+        method: 'PUT',
+
+        headers: { 'Content-Type': 'application/json' },
+
+        body: JSON.stringify(body),
+
+      });
+
+      const j = await r.json();
+
+      document.getElementById('actionMsg').textContent = r.ok ? '已保存 selection.json' : j.detail;
+
+    }
+
+
+
+    async function generateBrief() {
+
+      await saveSelection();
+
+      document.getElementById('actionMsg').textContent = '生成中（約 2–5 分鐘）…';
+
+      await fetch(`/api/generate-brief?report_key_str=${encodeURIComponent(DATE)}`, { method: 'POST' });
+
+      for (let i = 0; i < 180; i++) {
+
+        await new Promise(r => setTimeout(r, 3000));
+
+        const j = await (await fetch('/api/status')).json();
+
+        if (!j.job.running) {
+
+          document.getElementById('actionMsg').textContent = j.job.message;
+
+          if (j.job.message.includes('完成')) {
+
+            window.open(`/report/${DATE}/brief.html`, '_blank');
+
+          }
+
+          return;
+
+        }
+
+      }
+
+    }
+
+
+
+    applySaved();
+
+    updateQuota();
+
+  </script>
+
+</body>
+
+</html>
+
+

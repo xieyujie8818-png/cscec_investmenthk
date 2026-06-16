@@ -1,0 +1,115 @@
+// Run via browser CDP Runtime.evaluate — extracts article title, body text, in-article images
+(() => {
+  const url = location.href;
+  const idMatch = url.match(/article\/(\d+)/);
+  const articleId = idMatch ? idMatch[1] : '';
+  const h1 = document.querySelector('h1');
+  const title = h1 ? h1.innerText.trim() : document.title.split(' - ')[0].trim();
+
+  const AD_HINTS = [
+    'ad',
+    'advert',
+    'advertisement',
+    'banner',
+    'promo',
+    'sponsor',
+    'doubleclick',
+    'googlesyndication',
+    '新書推薦',
+    'bookcover',
+    '/book/',
+    'logo',
+    'icon',
+    'sprite',
+    'pixel',
+    'tracking',
+    'tkww-static',
+    'default-img',
+  ];
+
+  function isAdImage(src, imgEl) {
+    if (!src || src.startsWith('data:') || src.endsWith('.svg')) return true;
+    const low = src.toLowerCase();
+    if (low.endsWith('/htm/') || low.includes('mingpao.com/htm/')) return true;
+    if (AD_HINTS.some((h) => low.includes(h))) return true;
+    if (imgEl) {
+      const w = parseInt(imgEl.getAttribute('width') || imgEl.width || '0', 10);
+      const h = parseInt(imgEl.getAttribute('height') || imgEl.height || '0', 10);
+      if ((w > 0 && w < 120) || (h > 0 && h < 120)) return true;
+      const cls = (imgEl.className || '').toLowerCase();
+      const id = (imgEl.id || '').toLowerCase();
+      if (cls.includes('ad') || id.includes('ad') || cls.includes('banner')) return true;
+    }
+    return false;
+  }
+
+  function collectImages(nodes, extraFilter) {
+    return [...nodes]
+      .map((i) => ({ src: i.src, el: i }))
+      .filter(({ src, el }) => src && !isAdImage(src, el))
+      .filter(({ src }) => !extraFilter || extraFilter(src))
+      .map(({ src }) => src);
+  }
+
+  let text = '';
+  let imgs = [];
+
+  if (url.includes('hkej.com')) {
+    const raw = document.body.innerText;
+    const idx = raw.indexOf(title);
+    const start = idx >= 0 ? idx + title.length : 0;
+    const endMarkers = ['下一篇：', '下一篇:', '回上', '（信報新書推薦'];
+    let end = raw.length;
+    for (const m of endMarkers) {
+      const p = raw.indexOf(m, start);
+      if (p > start) end = Math.min(end, p);
+    }
+    text = raw.slice(start, end).trim();
+    imgs = collectImages(document.querySelectorAll('img'), (s) =>
+      articleId ? s.includes(articleId) && s.includes('static.hkej.com') : false
+    );
+    const articleRoot =
+      document.querySelector('.article-content, .article-body, article, #article-content') ||
+      document.querySelector('main');
+    if (articleRoot) {
+      const scoped = collectImages(articleRoot.querySelectorAll('img'), (s) =>
+        articleId ? s.includes(articleId) && s.includes('static.hkej.com') : false
+      );
+      if (scoped.length) imgs = scoped;
+    }
+  } else if (url.includes('hket.com')) {
+    const container =
+      document.querySelector('.article-detail, .article-content, #article-content, article') ||
+      document.querySelector('[class*="Article"]');
+    if (container) {
+      text = container.innerText.trim();
+      imgs = collectImages(container.querySelectorAll('img'));
+    }
+    const og = document.querySelector('meta[property="og:image"]');
+    if (og && og.content && !isAdImage(og.content)) {
+      imgs.unshift(og.content);
+    }
+    document.querySelectorAll('img[data-src], img[data-original]').forEach((img) => {
+      const src = img.dataset.src || img.dataset.original;
+      if (src && !isAdImage(src)) imgs.push(src);
+    });
+  } else if (url.includes('mingpao.com')) {
+    const container = document.querySelector('#upper_int_content, .txt4, article, .article-content');
+    if (container) {
+      text = container.innerText.replace(/- Advertisement -/g, '').trim();
+      imgs = collectImages(container.querySelectorAll('img'));
+    }
+  } else if (url.includes('tkww.hk') || url.includes('wenweipo.com')) {
+    const container = document.querySelector('.article-content, #content, article, .detail');
+    if (container) {
+      text = container.innerText.trim();
+      imgs = collectImages(container.querySelectorAll('img'));
+    }
+  } else if (url.includes('news.gov.hk')) {
+    const container = document.querySelector('#pressrelease, .content, article, main');
+    text = (container || document.body).innerText.trim();
+    imgs = collectImages((container || document.body).querySelectorAll('img'));
+  }
+
+  return JSON.stringify({ url, title, text, imgs: [...new Set(imgs)] });
+})();

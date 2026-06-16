@@ -1,0 +1,16 @@
+{
+  "links": [],
+  "ids": [
+    "STT202603R0495",
+    "STT202512R1554"
+  ],
+  "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/%E5%90%89%E5%96%86_STT202603R0495": {
+    "error": "Page.evaluate: SyntaxError: Invalid regular expression: missing /\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:302:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+  },
+  "https://hk.centanet.com/findproperty/transaction-detail/%E5%90%89%E5%96%86_STT202603R0495": {
+    "error": "Page.evaluate: SyntaxError: Invalid regular expression: missing /\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:302:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+  },
+  "https://hk.centanet.com/findproperty/zh-cn/transaction-detail/-%E5%90%89%E5%96%86_STT202603R0495": {
+    "error": "Page.evaluate: SyntaxError: Invalid regular expression: missing /\n    at eval (<anonymous>)\n    at UtilityScript.evaluate (<anonymous>:302:30)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+  }
+}

@@ -1,0 +1,14 @@
+﻿merged [<MergedCellRange B17:B19>, <MergedCellRange B23:B25>, <MergedCellRange A8:A10>, <MergedCellRange A2:A4>, <MergedCellRange B20:B22>, <MergedCellRange A17:A19>, <MergedCellRange A20:A22>, <MergedCellRange A11:A13>, <MergedCellRange B14:B16>, <MergedCellRange B11:B13>, <MergedCellRange A23:A25>, <MergedCellRange A5:A7>, <MergedCellRange B2:B4>, <MergedCellRange A14:A16>, <MergedCellRange B8:B10>, <MergedCellRange B5:B7>]
+1 ['序號', '項目', '成交時間', '單位', '樓層', '單位編號', '戶型', '實用面積', '樓齡', '租金', '實用呎租', '特殊呎租（實用呎租*1.1）']
+python : Traceback (most recent call last):
+位於 C:\Users\yujie.xie\AppData\Local\Temp\ps-script-cca74e1b-38ab-4647-85ca-3e79f941d2d4.ps1:110 字元:1
++ python -c "
++ ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 11, in <module>
+    print(r, vals)
+    ~~~~~^^^^^^^^^
+UnicodeEncodeError: 'cp950' codec can't encode character '\u5586' in position 6: illegal multibyte sequence
+2 

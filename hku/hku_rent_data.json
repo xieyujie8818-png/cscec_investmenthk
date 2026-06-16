@@ -1,0 +1,236 @@
+[
+  {
+    "name": "吉喆",
+    "url": "https://www.midland.com.hk/zh-hk/new-property/%E6%B8%AF%E5%B3%B6-%E5%A0%85%E5%B0%BC%E5%9C%B0%E5%9F%8E-%E5%90%89%E5%96%86-E000019385",
+    "year": 2025,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/new-property/%E6%B8%AF%E5%B3%B6-%E5%A0%85%E5%B0%BC%E5%9C%B0%E5%9F%8E-%E5%90%89%E5%96%86-E000019385；開放式租務參考：美聯新聞（2025年租務成交）",
+    "studio": {
+      "area": "206–297",
+      "rent": "16,500–18,500",
+      "psf": "78–85"
+    },
+    "one": null,
+    "two": null
+  },
+  {
+    "name": "Eight South Lane",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E5%A0%85%E5%B0%BC%E5%9C%B0%E5%9F%8E-Eight-South-Lane-E000015221",
+    "year": 2015,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E5%A0%85%E5%B0%BC%E5%9C%B0%E5%9F%8E-Eight-South-Lane-E000015221",
+    "studio": {
+      "area": "283–323",
+      "rent": "20,000–21,000",
+      "psf": "65–68",
+      "rent_count": 2
+    },
+    "one": {
+      "area": "296–338",
+      "rent": "21,000–23,000",
+      "psf": "68–71",
+      "rent_count": 2
+    },
+    "two": null
+  },
+  {
+    "name": "藝里坊．1號",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E8%97%9D%E9%87%8C%E5%9D%8A%EF%BC%8E1%E8%99%9F-E000016617",
+    "year": 2019,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E8%97%9D%E9%87%8C%E5%9D%8A%EF%BC%8E1%E8%99%9F-E000016617",
+    "studio": {
+      "area": "210–287",
+      "rent": "16,800–21,500",
+      "psf": "75–80",
+      "rent_count": 8
+    },
+    "one": {
+      "area": "247–313",
+      "rent": "21,500–23,500",
+      "psf": "75–87",
+      "rent_count": 4
+    },
+    "two": null
+  },
+  {
+    "name": "翰林峰",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E7%BF%B0%E6%9E%97%E5%B3%B0-E000015984",
+    "year": 2019,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E7%BF%B0%E6%9E%97%E5%B3%B0-E000015984",
+    "studio": {
+      "area": "191–269",
+      "rent": "18,500–21,500",
+      "psf": "80–97",
+      "rent_count": 19
+    },
+    "one": {
+      "area": "224–441",
+      "rent": "22,600–30,000",
+      "psf": "68–101",
+      "rent_count": 13
+    },
+    "two": {
+      "area": "407–559",
+      "rent": "33,000–38,000",
+      "psf": "68–81",
+      "rent_count": 4
+    }
+  },
+  {
+    "name": "曉譽",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E6%9B%89%E8%AD%BD-E000014006",
+    "year": 2014,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E6%9B%89%E8%AD%BD-E000014006",
+    "studio": null,
+    "one": {
+      "area": "241–471",
+      "rent": "20,000–32,000",
+      "psf": "68–83",
+      "rent_count": 3
+    },
+    "two": null
+  },
+  {
+    "name": "尚瓏",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E5%B0%9A%E7%93%8F-E000017130",
+    "year": 2022,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E5%B0%9A%E7%93%8F-E000017130",
+    "studio": {
+      "area": "244",
+      "rent": "20,000",
+      "psf": "82",
+      "rent_count": 1
+    },
+    "one": {
+      "area": "239–299",
+      "rent": "22,000–24,500",
+      "psf": "82–92",
+      "rent_count": 4
+    },
+    "two": {
+      "area": "318–532",
+      "rent": "34,000–42,000",
+      "psf": "79–107",
+      "rent_count": 2
+    }
+  },
+  {
+    "name": "懿山",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E6%87%BF%E5%B1%B1-E000013810",
+    "year": 2014,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E6%87%BF%E5%B1%B1-E000013810",
+    "studio": null,
+    "one": {
+      "area": "400",
+      "rent": "24,000",
+      "psf": "60",
+      "rent_count": 1
+    },
+    "two": null
+  },
+  {
+    "name": "瑧蓺",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E7%91%A7%E8%93%BA-E000016134",
+    "year": 2018,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E7%91%A7%E8%93%BA-E000016134",
+    "studio": {
+      "area": "177–270",
+      "rent": "16,500–20,000",
+      "psf": "74–93",
+      "rent_count": 13
+    },
+    "one": {
+      "area": "351",
+      "rent": "26,000",
+      "psf": "74",
+      "rent_count": 1
+    },
+    "two": null
+  },
+  {
+    "name": "高士台",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-Kensington-Hill-E000015321",
+    "year": 2016,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-Kensington-Hill-E000015321；兩房租金：美聯屋苑頁放盤叫價",
+    "studio": null,
+    "one": null,
+    "two": {
+      "area": "532–864",
+      "rent": "38,000–57,000",
+      "psf": "54–62"
+    }
+  },
+  {
+    "name": "63 Pokfulam",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E6%B8%AF%E5%B3%B6%E8%A5%BF-63-Pokfulam-E000016034",
+    "year": 2020,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E6%B8%AF%E5%B3%B6%E8%A5%BF-63-Pokfulam-E000016034",
+    "studio": {
+      "area": "208–350",
+      "rent": "18,500–24,500",
+      "psf": "70–89",
+      "rent_count": 9
+    },
+    "one": {
+      "area": "250–353",
+      "rent": "21,500–26,500",
+      "psf": "75–86",
+      "rent_count": 7
+    },
+    "two": null
+  },
+  {
+    "name": "Kennedy 38",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-Kennedy-38-E000016716",
+    "year": 2020,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-Kennedy-38-E000016716",
+    "studio": null,
+    "one": {
+      "area": "341–425",
+      "rent": "15,000–17,000",
+      "psf": "40–44",
+      "rent_count": 8
+    },
+    "two": {
+      "area": "380–714",
+      "rent": "19,000–25,000",
+      "psf": "35–50",
+      "rent_count": 20
+    }
+  },
+  {
+    "name": "藝里坊．2號",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E8%97%9D%E9%87%8C%E5%9D%8A-2%E8%99%9F-E000017106",
+    "year": 2021,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-%E8%97%9D%E9%87%8C%E5%9D%8A-2%E8%99%9F-E000017106",
+    "studio": {
+      "area": "192–202",
+      "rent": "17,500–18,000",
+      "psf": "89–91",
+      "rent_count": 2
+    },
+    "one": {
+      "area": "220–308",
+      "rent": "20,000–24,000",
+      "psf": "78–91",
+      "rent_count": 11
+    },
+    "two": {
+      "area": "360–407",
+      "rent": "31,000–33,000",
+      "psf": "81–86",
+      "rent_count": 2
+    }
+  },
+  {
+    "name": "赋居",
+    "url": "https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-Resiglow-Bonham-E000016875",
+    "year": 2019,
+    "source": "美聯：https://www.midland.com.hk/zh-hk/estate/%E6%B8%AF%E5%B3%B6-%E8%A5%BF%E7%87%9F%E7%9B%A4-Resiglow-Bonham-E000016875；一房租金：美聯註冊租務成交（2024-02）",
+    "studio": null,
+    "one": {
+      "area": "312",
+      "rent": "22,800",
+      "psf": "73"
+    },
+    "two": null
+  }
+]

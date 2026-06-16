@@ -1,0 +1,44 @@
+{
+  "天鑽": {
+    "page": "https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E5%A4%A9%E9%91%BD-E000016716",
+    "image_url": "https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fimg.midland.com.hk%2Fphoto_db%2Foutlook%2Festate%2FEE000016716_11.jpg",
+    "file": "assets/estates/天鑽.jpg",
+    "error": null
+  },
+  "雲滙": {
+    "page": "https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E7%99%BD%E7%9F%B3%E8%A7%92-%E9%9B%B2%E6%BB%99-E000016471",
+    "image_url": "https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fimg.midland.com.hk%2Fphoto_db%2Foutlook%2Festate%2FEE000016471_2.jpg",
+    "file": "assets/estates/雲滙.jpg",
+    "error": null
+  },
+  "海日灣II": {
+    "page": "https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E7%99%BD%E7%9F%B3%E8%A7%92-%E6%B5%B7%E6%97%A5%E7%81%A3II-E000016718",
+    "image_url": "https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fimg.midland.com.hk%2Fphoto_db%2Foutlook%2Festate%2FEE000016718_6.jpg",
+    "file": "assets/estates/海日灣II.jpg",
+    "error": null
+  },
+  "大埔寶馬山": {
+    "page": "https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E5%A4%A7%E5%9F%94%E5%AF%B6%E9%A6%AC%E5%B1%B1-E11504",
+    "image_url": "https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fimg.midland.com.hk%2Fphoto_db%2Foutlook%2Festate%2FEE11504_30.jpg",
+    "file": "assets/estates/大埔寶馬山.jpg",
+    "error": null
+  },
+  "雍怡雅苑": {
+    "page": "https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E9%9B%8D%E6%80%A1%E9%9B%85%E8%8B%91-E11509",
+    "image_url": "https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fimg.midland.com.hk%2Fphoto_db%2Foutlook%2Festate%2FEE11509_1.jpg",
+    "file": "assets/estates/雍怡雅苑.jpg",
+    "error": null
+  },
+  "悠然山莊": {
+    "page": "https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E6%82%A0%E7%84%B6%E5%B1%B1%E8%8E%8A-E11584",
+    "image_url": "https://wm-cdn.midland.com.hk/img_wm_revamp.php?wm=mr&src=https%3A%2F%2Fimg.midland.com.hk%2Fphoto_db%2Foutlook%2Festate%2FEE11584_13.jpg",
+    "file": "assets/estates/悠然山莊.jpg",
+    "error": null
+  },
+  "偉東雍宜山莊": {
+    "page": "https://www.midland.com.hk/zh-hk/estate/%E6%96%B0%E7%95%8C-%E5%A4%A7%E5%9F%94%E5%8D%8A%E5%B1%B1-%E5%81%89%E6%9D%B1-%E9%9B%8D%E5%AE%9C%E5%B1%B1%E8%8E%8A-E000019483",
+    "image_url": "https://res-cms.midland.com.hk/i_Stock_1264774638_38c867a7fc.jpeg",
+    "file": "assets/estates/偉東雍宜山莊.jpeg",
+    "error": null
+  }
+}
