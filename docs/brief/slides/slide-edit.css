@@ -82,12 +82,23 @@ body.slide-has-toolbar.slide-editing {
   cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  .slide-fab-edit {
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0));
+    right: 0.75rem;
+    padding: 0.48rem 0.85rem;
+    font-size: 0.78rem;
+  }
+}
+
 body.slide-editing .slide-fab-edit {
   display: none;
 }
 
 body.slide-editing .tap-zones,
-body.slide-editing .mobile-hint {
+body.slide-editing .usage-guide-btn,
+body.slide-editing .usage-guide-panel,
+body.slide-editing .usage-guide-backdrop {
   pointer-events: none;
   opacity: 0.35;
 }

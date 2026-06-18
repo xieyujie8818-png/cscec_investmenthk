@@ -5,7 +5,11 @@
   if (!deck) return;
 
   var slides = Array.from(deck.querySelectorAll(".slide"));
-  var mobileHint = document.querySelector(".mobile-hint");
+  var guideBtn = document.getElementById("usage-guide-btn");
+  var guidePanel = document.getElementById("usage-guide-panel");
+  var guideBackdrop = document.getElementById("usage-guide-backdrop");
+  var guideClose = guidePanel && guidePanel.querySelector(".usage-guide-close");
+  var lastIdx = 0;
   var startX = 0;
   var startY = 0;
   var tracking = false;
@@ -31,6 +35,39 @@
 
   function go(dir) {
     goTo(activeIndex() + dir);
+  }
+
+  function setFlipDirection(idx) {
+    var dir = idx >= lastIdx ? "fwd" : "back";
+    lastIdx = idx;
+    deck.setAttribute("data-flip", dir);
+  }
+
+  function openUsageGuide() {
+    if (!guideBtn || !guidePanel || !guideBackdrop) return;
+    guideBtn.setAttribute("aria-expanded", "true");
+    guidePanel.hidden = false;
+    guideBackdrop.hidden = false;
+  }
+
+  function closeUsageGuide() {
+    if (!guideBtn || !guidePanel || !guideBackdrop) return;
+    guideBtn.setAttribute("aria-expanded", "false");
+    guidePanel.hidden = true;
+    guideBackdrop.hidden = true;
+  }
+
+  if (guideBtn && guidePanel) {
+    guideBtn.addEventListener("click", function () {
+      if (guidePanel.hidden) openUsageGuide();
+      else closeUsageGuide();
+    });
+  }
+  if (guideClose) {
+    guideClose.addEventListener("click", closeUsageGuide);
+  }
+  if (guideBackdrop) {
+    guideBackdrop.addEventListener("click", closeUsageGuide);
   }
 
   function findScrollable(start) {
@@ -80,6 +117,7 @@
       var dx = t.clientX - startX;
       var dy = t.clientY - startY;
       if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy) * 1.2) return;
+      closeUsageGuide();
       go(dx < 0 ? 1 : -1);
     },
     { passive: true }
@@ -90,6 +128,7 @@
     zones.addEventListener("click", function (e) {
       var el = e.target;
       if (!el || !el.dataset) return;
+      closeUsageGuide();
       if (el.dataset.nav === "prev") go(-1);
       if (el.dataset.nav === "next") go(1);
     });
@@ -126,7 +165,7 @@
   function updateTocActive(idx) {
     deck.querySelectorAll(".slide-toc li[data-goto]").forEach(function (li) {
       var n = parseInt(li.getAttribute("data-goto"), 10);
-      li.classList.toggle("is-toc-active", !isNaN(n) && n === idx);
+      li.classList.toggle("is-toc-active", !isNaN(n) && n === idx + 1);
     });
   }
 
@@ -138,15 +177,9 @@
     e.preventDefault();
     var n = parseInt(li.getAttribute("data-goto"), 10);
     if (isNaN(n)) return;
+    closeUsageGuide();
     playTocFeedback(li, e.clientX, e.clientY, function () {
-      goTo(n);
-    });
-  });
-
-  document.addEventListener("htmlppt:slide", function (ev) {
-    var idx = ev.detail && typeof ev.detail.idx === "number" ? ev.detail.idx : activeIndex();
-    requestAnimationFrame(function () {
-      updateTocActive(idx);
+      goTo(n - 1);
     });
   });
 
@@ -177,34 +210,30 @@
     body.addEventListener("scroll", updateScrollHints, { passive: true });
   });
 
-  document.addEventListener("htmlppt:slide", function () {
-    requestAnimationFrame(updateScrollHints);
-  });
-
-  function updateMobileHint() {
-    if (!mobileHint) return;
-    mobileHint.classList.toggle("is-hidden", activeIndex() !== 0);
-  }
-
-  document.addEventListener("htmlppt:slide", function () {
-    requestAnimationFrame(updateMobileHint);
+  document.addEventListener("htmlppt:slide", function (ev) {
+    var idx = ev.detail && typeof ev.detail.idx === "number" ? ev.detail.idx : activeIndex();
+    setFlipDirection(idx);
+    requestAnimationFrame(function () {
+      updateTocActive(idx);
+      updateScrollHints();
+    });
   });
 
   document.addEventListener("htmlppt:refresh", function () {
     slides = Array.from(deck.querySelectorAll(".slide"));
-    requestAnimationFrame(updateScrollHints);
-    requestAnimationFrame(updateMobileHint);
     requestAnimationFrame(function () {
+      updateScrollHints();
       updateTocActive(activeIndex());
     });
   });
 
+  deck.setAttribute("data-flip", "fwd");
   requestAnimationFrame(function () {
-    updateTocActive(activeIndex());
+    lastIdx = activeIndex();
+    updateTocActive(lastIdx);
   });
 
   window.addEventListener("resize", updateScrollHints);
   requestAnimationFrame(updateScrollHints);
-  requestAnimationFrame(updateMobileHint);
   window.updateSlideScrollHints = updateScrollHints;
 })();
