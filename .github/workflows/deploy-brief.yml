@@ -5,13 +5,15 @@ on:
     branches: [main, master]
     paths:
       - "docs/**"
-      - "news-intelligence-mvp/scripts/build_leadership_brief.py"
-      - "news-intelligence-mvp/output/**/articles.json"
       - ".github/workflows/deploy-brief.yml"
   workflow_dispatch:
     inputs:
+      rebuild_from_mvp:
+        description: "Rebuild flat HTML from news-intelligence-mvp/output (legacy MVP track)"
+        type: boolean
+        default: false
       output_dir:
-        description: "Output folder name under news-intelligence-mvp/output (e.g. 2026-06-13_2026-06-15)"
+        description: "Output folder under news-intelligence-mvp/output (e.g. 2026-06-13_2026-06-15)"
         required: false
         default: "2026-06-13_2026-06-15"
 
@@ -31,10 +33,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.rebuild_from_mvp }}
         with:
           python-version: "3.12"
 
-      - name: Build self-contained HTML brief
+      - name: Optional MVP rebuild
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.rebuild_from_mvp }}
         run: |
           OUT="${{ github.event.inputs.output_dir || '2026-06-13_2026-06-15' }}"
           python news-intelligence-mvp/scripts/build_leadership_brief.py \
