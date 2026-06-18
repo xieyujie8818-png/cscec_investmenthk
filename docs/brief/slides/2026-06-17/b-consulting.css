@@ -1,0 +1,557 @@
+/* 香港簡訊 · B 咨詢版（McKinsey/BCG 雙字體 · 純白底） */
+.tpl-b-consulting {
+  --red: #c8102e;
+  --red-dark: #9b0c24;
+  --navy: #051c2c;
+  --line: #e8e8ec;
+  --line-strong: #d0d0d8;
+  --text-1: #1a1a1f;
+  --text-2: #5c5c66;
+  --text-3: #8a8884;
+  --bg: #ffffff;
+  --font-sans: Inter, "Microsoft JhengHei", "PingFang TC", sans-serif;
+  --font-serif: Fraunces, "PMingLiU", "Songti TC", serif;
+  --accent: var(--red);
+}
+
+.tpl-b-consulting,
+.tpl-b-consulting .deck {
+  background: var(--bg);
+}
+
+.tpl-b-consulting .slide {
+  background: var(--bg);
+  color: var(--text-1);
+  padding: 52px 72px 64px;
+  justify-content: flex-start;
+  font-family: var(--font-sans);
+}
+
+.tpl-b-consulting .slide-brand {
+  position: absolute;
+  top: 20px;
+  left: 72px;
+  right: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.tpl-b-consulting .slide-brand img {
+  height: 46px;
+  width: auto;
+}
+
+.tpl-b-consulting .slide-brand .badge {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  padding: 6px 12px;
+}
+
+.tpl-b-consulting .pattern {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, var(--navy) 39px, var(--navy) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, var(--navy) 39px, var(--navy) 40px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(160deg, black 0%, transparent 65%);
+}
+
+.tpl-b-consulting .cover-bar-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--red);
+}
+
+/* Cover */
+.tpl-b-consulting .slide-cover .cover-main {
+  position: relative;
+  margin-top: 88px;
+  max-width: 58%;
+  z-index: 2;
+}
+
+.tpl-b-consulting .slide-cover .cover-kicker {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  color: var(--red);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.tpl-b-consulting .slide-cover .h1 {
+  font-family: var(--font-serif);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.tpl-b-consulting .slide-cover .lede {
+  font-size: 22px;
+  color: var(--text-2);
+  margin-bottom: 28px;
+}
+
+.tpl-b-consulting .slide-cover .cover-action {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--navy);
+  border-left: 4px solid var(--red);
+  padding-left: 20px;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.tpl-b-consulting .cover-aside {
+  position: absolute;
+  right: 72px;
+  top: 120px;
+  width: 300px;
+  border: 1px solid var(--line-strong);
+  padding: 24px 22px;
+  z-index: 2;
+  background: #fff;
+}
+
+.tpl-b-consulting .cover-aside .label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--text-2);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.tpl-b-consulting .cover-aside .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.tpl-b-consulting .cover-aside .row .val {
+  font-weight: 600;
+  color: var(--navy);
+}
+
+/* TOC */
+.tpl-b-consulting .slide-toc .toc-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--red), var(--navy));
+}
+
+.tpl-b-consulting .slide-toc .toc-head {
+  margin-top: 72px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--navy);
+  margin-bottom: 20px;
+}
+
+.tpl-b-consulting .slide-toc .toc-action-title {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.32;
+  max-width: 95%;
+}
+
+.tpl-b-consulting .slide-toc .toc-action-title em {
+  font-style: normal;
+  color: var(--red);
+}
+
+.tpl-b-consulting .slide-toc-scroll {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-height: calc(100% - 200px);
+  overflow: hidden;
+}
+
+.tpl-b-consulting .toc-section {
+  border: 1px solid var(--line-strong);
+  padding: 14px 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.tpl-b-consulting .toc-section h4 {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  margin: 0 0 4px;
+}
+
+.tpl-b-consulting .toc-section .count {
+  font-size: 10px;
+  color: var(--text-2);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tpl-b-consulting .toc-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tpl-b-consulting .toc-section li {
+  font-size: 12.5px;
+  line-height: 1.4;
+  padding: 8px 10px 8px 14px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  transition:
+    background 0.24s ease,
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.24s ease;
+}
+
+.tpl-b-consulting .toc-section li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: var(--red);
+  border-radius: 0 2px 2px 0;
+  transform: scaleY(0);
+  transform-origin: center top;
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tpl-b-consulting .toc-section li:hover {
+  background: rgba(5, 28, 44, 0.035);
+}
+
+.tpl-b-consulting .toc-section li.is-toc-active::before {
+  transform: scaleY(1);
+}
+
+.tpl-b-consulting .toc-section li.is-toc-press {
+  background: rgba(200, 16, 46, 0.07);
+  transform: translateX(5px);
+  box-shadow: inset 0 0 0 1px rgba(200, 16, 46, 0.12);
+}
+
+.tpl-b-consulting .toc-section li.is-toc-jump .toc-item-title {
+  color: var(--red);
+  transition: color 0.22s ease;
+}
+
+.tpl-b-consulting .toc-section .toc-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(200, 16, 46, 0.2);
+  transform: scale(0);
+  opacity: 0.85;
+  animation: toc-ripple-out 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes toc-ripple-out {
+  to {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+
+.tpl-b-consulting .toc-section .toc-item-title,
+.tpl-b-consulting .toc-section .toc-item-lede {
+  position: relative;
+  z-index: 1;
+}
+
+.tpl-b-consulting .toc-section .toc-item-title {
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.35;
+}
+
+.tpl-b-consulting .toc-section .toc-item-lede {
+  font-size: 10.5px;
+  line-height: 1.5;
+  color: var(--text-2);
+  font-weight: 400;
+  display: block;
+}
+
+.tpl-b-consulting .toc-section li:last-child {
+  border-bottom: none;
+}
+
+/* Section divider */
+.tpl-b-consulting .slide-section .h1 {
+  font-family: var(--font-serif);
+  font-size: 64px;
+  color: var(--navy);
+  margin-top: 120px;
+}
+
+.tpl-b-consulting .slide-section .section-count {
+  font-size: 18px;
+  color: var(--text-2);
+  margin-top: 12px;
+}
+
+/* Article — one news item per slide, scroll within body */
+.tpl-b-consulting .slide-article {
+  justify-content: flex-start;
+  min-height: 0;
+}
+
+.tpl-b-consulting .slide-article .article-top {
+  margin-top: 72px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.tpl-b-consulting .slide-article .kicker {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.tpl-b-consulting .slide-article .h2 {
+  font-family: var(--font-serif);
+  font-size: 34px;
+  color: var(--navy);
+  line-height: 1.2;
+  margin: 8px 0;
+}
+
+.tpl-b-consulting .slide-article .article-meta {
+  font-size: 13px;
+  color: var(--text-2);
+}
+
+.tpl-b-consulting .slide-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 14px;
+  padding-right: 8px;
+  padding-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.72;
+  text-align: justify;
+  max-height: calc(100vh - 220px);
+}
+
+.tpl-b-consulting .slide-scroll-fade {
+  position: absolute;
+  left: 72px;
+  right: 72px;
+  bottom: 52px;
+  height: 48px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 4;
+}
+
+.tpl-b-consulting .slide-article.is-scrollable .slide-scroll-fade {
+  opacity: 1;
+}
+
+.tpl-b-consulting .slide-article.is-scrollable.is-scrolled-end .slide-scroll-fade {
+  opacity: 0;
+}
+
+.tpl-b-consulting .scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 58px;
+  transform: translateX(-50%);
+  z-index: 6;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line-strong);
+  box-shadow: 0 4px 14px rgba(5, 28, 44, 0.08);
+  pointer-events: none;
+  white-space: nowrap;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  animation: scroll-hint-bob 2s ease-in-out infinite;
+}
+
+.tpl-b-consulting .scroll-hint.is-hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(6px);
+  animation: none;
+}
+
+@keyframes scroll-hint-bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(3px); }
+}
+
+/* 品牌紅色滾動條 */
+.tpl-b-consulting .slide-body,
+.tpl-b-consulting .slide-toc-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #c8102e rgba(5, 28, 44, 0.08);
+}
+
+.tpl-b-consulting .slide-body::-webkit-scrollbar,
+.tpl-b-consulting .slide-toc-scroll::-webkit-scrollbar {
+  width: 9px;
+}
+
+.tpl-b-consulting .slide-body::-webkit-scrollbar-track,
+.tpl-b-consulting .slide-toc-scroll::-webkit-scrollbar-track {
+  background: rgba(5, 28, 44, 0.06);
+  border-radius: 999px;
+  margin: 4px 0;
+}
+
+.tpl-b-consulting .slide-body::-webkit-scrollbar-thumb,
+.tpl-b-consulting .slide-toc-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #d41835 0%, #c8102e 45%, #9b0c24 100%);
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  min-height: 40px;
+}
+
+.tpl-b-consulting .slide-body::-webkit-scrollbar-thumb:hover,
+.tpl-b-consulting .slide-toc-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #c8102e 0%, #9b0c24 100%);
+}
+
+.tpl-b-consulting .slide-body::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.tpl-b-consulting .slide-body p {
+  margin: 0 0 10px;
+}
+
+.tpl-b-consulting .slide-body .subhead {
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 12px;
+}
+
+.tpl-b-consulting .slide-body .subhead strong,
+.tpl-b-consulting .slide-body .subhead b {
+  font-weight: 700;
+}
+
+.tpl-b-consulting .slide-body figure.inline-figure {
+  margin: 12px 0 14px;
+  text-align: center;
+}
+
+.tpl-b-consulting .slide-body figure.inline-figure img {
+  max-width: 100%;
+  max-height: min(42vh, 360px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: #fafafa;
+}
+
+.tpl-b-consulting .deck-footer {
+  position: absolute;
+  bottom: 28px;
+  left: 72px;
+  right: 72px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-2);
+  letter-spacing: 0.05em;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.tpl-b-consulting .slide-end .h1 {
+  font-family: var(--font-serif);
+  font-size: 72px;
+  color: var(--navy);
+  margin-top: 140px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .tpl-b-consulting .slide {
+    padding: 48px 20px 56px;
+  }
+  .tpl-b-consulting .slide-brand {
+    left: 20px;
+    right: 20px;
+  }
+  .tpl-b-consulting .slide-brand img {
+    height: 36px;
+  }
+  .tpl-b-consulting .slide-cover .cover-main {
+    max-width: 100%;
+    margin-top: 72px;
+  }
+  .tpl-b-consulting .slide-cover .h1 {
+    font-size: 42px;
+  }
+  .tpl-b-consulting .cover-aside {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    margin-top: 24px;
+  }
+  .tpl-b-consulting .slide-toc-scroll {
+    grid-template-columns: 1fr;
+    max-height: none;
+    overflow-y: auto;
+  }
+  .tpl-b-consulting .slide-article .h2 {
+    font-size: 22px;
+  }
+  .tpl-b-consulting .deck-footer {
+    left: 20px;
+    right: 20px;
+  }
+  .tpl-b-consulting .slide-scroll-fade {
+    left: 20px;
+    right: 20px;
+  }
+  .tpl-b-consulting .slide-body {
+    max-height: calc(100vh - 200px);
+  }
+}

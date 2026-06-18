@@ -40,7 +40,7 @@
   ready(function () {
     const deck = document.querySelector('.deck');
     if (!deck) return;
-    const slides = Array.from(deck.querySelectorAll('.slide'));
+    let slides = Array.from(deck.querySelectorAll('.slide'));
     if (!slides.length) return;
 
     const previewOnlyIdx = getPreviewIdx();
@@ -106,7 +106,113 @@
     }
 
     let idx = 0;
-    const total = slides.length;
+    let total = slides.length;
+
+    function appendOverviewThumb(s, i) {
+      const t = document.createElement('div');
+      t.className = 'thumb';
+      t.style.padding = '0 0 56.25% 0';
+      t.style.height = '0';
+      t.style.position = 'relative';
+      t.style.overflow = 'hidden';
+
+      const title = s.getAttribute('data-title') ||
+        (s.querySelector('h1,h2,h3')||{}).textContent || ('Slide '+(i+1));
+
+      const mini = document.createElement('div');
+      mini.className = 'mini-slide';
+      mini.style.position = 'absolute';
+      mini.style.top = '0';
+      mini.style.left = '0';
+      mini.style.width = '1920px';
+      mini.style.height = '1080px';
+      mini.style.transformOrigin = 'top left';
+      mini.style.pointerEvents = 'none';
+      mini.style.background = 'var(--bg)';
+
+      const clone = s.cloneNode(true);
+      clone.className = 'slide is-active';
+      clone.style.position = 'absolute';
+      clone.style.inset = '0';
+      clone.style.transform = 'none';
+      clone.style.opacity = '1';
+      clone.style.padding = '72px 96px';
+
+      mini.appendChild(clone);
+      t.appendChild(mini);
+
+      const overlay = document.createElement('div');
+      overlay.style.position = 'absolute';
+      overlay.style.inset = '0';
+      overlay.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.8) 100%)';
+      overlay.style.color = '#fff';
+      overlay.style.zIndex = '10';
+      overlay.style.pointerEvents = 'none';
+
+      const n = document.createElement('div');
+      n.className = 'n';
+      n.textContent = i + 1;
+      n.style.position = 'absolute';
+      n.style.top = '12px';
+      n.style.left = '16px';
+      n.style.fontWeight = '700';
+      n.style.fontSize = '16px';
+      n.style.color = '#fff';
+      n.style.textShadow = '0 1px 4px rgba(0,0,0,0.8)';
+
+      const text = document.createElement('div');
+      text.className = 't';
+      text.textContent = title.trim().slice(0,80);
+      text.style.position = 'absolute';
+      text.style.bottom = '12px';
+      text.style.left = '16px';
+      text.style.right = '16px';
+      text.style.fontWeight = '600';
+      text.style.fontSize = '14px';
+      text.style.color = '#fff';
+      text.style.textShadow = '0 1px 4px rgba(0,0,0,0.8)';
+
+      overlay.appendChild(n);
+      overlay.appendChild(text);
+      t.appendChild(overlay);
+
+      t.addEventListener('click', () => { go(i); toggleOverview(false); });
+      overview.appendChild(t);
+    }
+
+    function rebuildOverview() {
+      if (!overview) return;
+      overview.innerHTML = '';
+      slides.forEach((s, i) => appendOverviewThumb(s, i));
+    }
+
+    function reindexFooters() {
+      slides.forEach((s, i) => {
+        const num = s.querySelector('.slide-number');
+        if (num) {
+          num.setAttribute('data-current', String(i + 1));
+          num.setAttribute('data-total', String(total));
+        }
+      });
+    }
+
+    function refreshDeck(removedIdx) {
+      slides = Array.from(deck.querySelectorAll('.slide'));
+      total = slides.length;
+      if (!total) return;
+      let next = idx;
+      if (typeof removedIdx === 'number') {
+        if (removedIdx < idx) next = idx - 1;
+        else if (removedIdx === idx) next = Math.min(idx, total - 1);
+      }
+      next = Math.max(0, Math.min(total - 1, next));
+      reindexFooters();
+      rebuildOverview();
+      go(next, true);
+      document.dispatchEvent(new CustomEvent('htmlppt:refresh', {
+        detail: { idx: next, total: total },
+      }));
+    }
 
     /* ===== BroadcastChannel for presenter sync ===== */
     const CHANNEL_NAME = 'html-ppt-presenter-' + location.pathname;
@@ -139,81 +245,7 @@
     if (!overview) {
       overview = document.createElement('div');
       overview.className = 'overview';
-      slides.forEach((s, i) => {
-        const t = document.createElement('div');
-        t.className = 'thumb';
-        // Force 16:9 aspect ratio robustly
-        t.style.padding = '0 0 56.25% 0';
-        t.style.height = '0';
-        t.style.position = 'relative';
-        t.style.overflow = 'hidden';
-
-        const title = s.getAttribute('data-title') ||
-          (s.querySelector('h1,h2,h3')||{}).textContent || ('Slide '+(i+1));
-        
-        // Create a container for the mini-slide
-        const mini = document.createElement('div');
-        mini.className = 'mini-slide';
-        mini.style.position = 'absolute';
-        mini.style.top = '0';
-        mini.style.left = '0';
-        mini.style.width = '1920px';
-        mini.style.height = '1080px';
-        mini.style.transformOrigin = 'top left';
-        mini.style.pointerEvents = 'none';
-        mini.style.background = 'var(--bg)';
-        
-        // Clone the slide content
-        const clone = s.cloneNode(true);
-        clone.className = 'slide is-active'; // force active styles
-        clone.style.position = 'absolute';
-        clone.style.inset = '0';
-        clone.style.transform = 'none';
-        clone.style.opacity = '1';
-        clone.style.padding = '72px 96px'; // ensure padding is kept
-        
-        mini.appendChild(clone);
-        t.appendChild(mini);
-
-        // Add the number and title overlay
-        const overlay = document.createElement('div');
-        overlay.style.position = 'absolute';
-        overlay.style.inset = '0';
-        overlay.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, transparent 40%, transparent 60%, rgba(0,0,0,0.8) 100%)';
-        overlay.style.color = '#fff';
-        overlay.style.zIndex = '10';
-        overlay.style.pointerEvents = 'none';
-        
-        const n = document.createElement('div');
-        n.className = 'n';
-        n.textContent = i + 1;
-        n.style.position = 'absolute';
-        n.style.top = '12px';
-        n.style.left = '16px';
-        n.style.fontWeight = '700';
-        n.style.fontSize = '16px';
-        n.style.color = '#fff';
-        n.style.textShadow = '0 1px 4px rgba(0,0,0,0.8)';
-        
-        const text = document.createElement('div');
-        text.className = 't';
-        text.textContent = title.trim().slice(0,80);
-        text.style.position = 'absolute';
-        text.style.bottom = '12px';
-        text.style.left = '16px';
-        text.style.right = '16px';
-        text.style.fontWeight = '600';
-        text.style.fontSize = '14px';
-        text.style.color = '#fff';
-        text.style.textShadow = '0 1px 4px rgba(0,0,0,0.8)';
-        
-        overlay.appendChild(n);
-        overlay.appendChild(text);
-        t.appendChild(overlay);
-
-        t.addEventListener('click', () => { go(i); toggleOverview(false); });
-        overview.appendChild(t);
-      });
+      slides.forEach((s, i) => appendOverviewThumb(s, i));
       document.body.appendChild(overview);
     }
 
@@ -225,6 +257,7 @@
         s.classList.toggle('is-prev', i<n);
       });
       idx = n;
+      document.dispatchEvent(new CustomEvent('htmlppt:slide', { detail: { idx: n, total: total } }));
       barFill.style.width = ((n+1)/total*100)+'%';
       const numEl = document.querySelector('.slide-number');
       if (numEl) { numEl.setAttribute('data-current', n+1); numEl.setAttribute('data-total', total); }
@@ -951,10 +984,20 @@
     // hash deep-link
     function fromHash(){
       const m = /^#\/(\d+)/.exec(location.hash||'');
-      if (m) go(Math.max(0, parseInt(m[1],10)-1));
+      if (m) {
+        go(Math.max(0, parseInt(m[1],10)-1));
+        return true;
+      }
+      return false;
     }
     window.addEventListener('hashchange', fromHash);
-    fromHash();
-    go(idx);
+    if (!fromHash()) go(idx);
+
+    window.htmlPpt = {
+      go: go,
+      getIndex: function () { return idx; },
+      getTotal: function () { return total; },
+      refresh: refreshDeck,
+    };
   });
 })();

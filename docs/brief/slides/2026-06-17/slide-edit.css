@@ -1,0 +1,184 @@
+/* B 簡報 · 翻頁 deck 內聯編輯（復用 brief-edit 交互） */
+
+#slide-edit-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
+  background: #051c2c;
+  color: #fff;
+  font-family: Inter, "Microsoft JhengHei", sans-serif;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-100%);
+  transition: transform 0.25s ease;
+}
+
+body.slide-editing #slide-edit-toolbar {
+  transform: translateY(0);
+}
+
+body.slide-has-toolbar.slide-editing {
+  padding-top: 48px;
+}
+
+#slide-edit-toolbar .sep {
+  width: 1px;
+  height: 1.1rem;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+#slide-edit-toolbar button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+#slide-edit-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+#slide-edit-toolbar button.primary {
+  background: #c8102e;
+}
+
+#slide-edit-toolbar button.fmt-bold {
+  font-weight: 700;
+  min-width: 2rem;
+}
+
+#slide-edit-toolbar button.fmt-bold.active {
+  background: #c8102e;
+}
+
+#slide-edit-toolbar .status {
+  margin-left: auto;
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.slide-fab-edit {
+  position: fixed;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0));
+  right: 1rem;
+  z-index: 10000;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  background: #051c2c;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(5, 28, 44, 0.3);
+  cursor: pointer;
+}
+
+body.slide-editing .slide-fab-edit {
+  display: none;
+}
+
+body.slide-editing .tap-zones,
+body.slide-editing .mobile-hint {
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+body.slide-editing .slide-body,
+body.slide-editing .slide-article .article-top {
+  outline: 1px dashed rgba(200, 16, 46, 0.4);
+  outline-offset: 3px;
+}
+
+body.slide-editing .editable-block {
+  position: relative;
+}
+
+body.slide-editing .slide-block-delete {
+  display: flex;
+  pointer-events: auto;
+}
+
+.slide-block-delete {
+  display: none;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: #c8102e;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 30;
+  padding: 0;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(200, 16, 46, 0.35);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.slide-block-delete:hover {
+  background: #9b0c24;
+  transform: scale(1.05);
+}
+
+.slide-block-delete:active {
+  transform: scale(0.95);
+}
+
+body.slide-editing .slide-add-para {
+  display: inline-block;
+}
+
+.slide-add-para {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  border: 1px dashed #d0d0d8;
+  border-radius: 4px;
+  background: #fff;
+  color: #5c5c66;
+  cursor: pointer;
+}
+
+.slide-body strong,
+.slide-body b {
+  font-weight: 600;
+  color: #051c2c;
+}
+
+/* 刪除後不留空行 */
+.slide-body > p:empty,
+.slide-body > figure:empty,
+.slide-body > figure:not(:has(img)),
+.slide-body > div:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  height: 0 !important;
+  overflow: hidden;
+}
+
+.slide-body > .editable-block {
+  margin: 0 0 10px;
+}
+
+.slide-body > figure.editable-block {
+  margin: 12px 0 14px;
+}
