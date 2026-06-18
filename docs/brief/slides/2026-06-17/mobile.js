@@ -73,6 +73,7 @@
   function findScrollable(start) {
     var el = start;
     while (el && el !== document.body) {
+      if (el.classList && el.classList.contains("slide-toc-main")) return el;
       if (el.classList && el.classList.contains("slide-body")) return el;
       if (el.classList && el.classList.contains("slide-toc-scroll")) return el;
       var style = window.getComputedStyle(el);

@@ -680,12 +680,33 @@
 
 /* Mobile layout */
 @media (max-width: 900px) {
+  html,
+  body.tpl-b-consulting {
+    overflow: hidden;
+    height: 100%;
+    overscroll-behavior: none;
+  }
+
   .tpl-b-consulting {
     --mobile-header-h: 44px;
+    --mobile-footer-h: 36px;
+  }
+
+  .tpl-b-consulting .deck {
+    height: 100%;
+    height: 100dvh;
+    overflow: hidden;
   }
 
   .tpl-b-consulting .slide {
-    padding: calc(var(--mobile-header-h) + env(safe-area-inset-top, 0px) + 10px) 16px calc(56px + env(safe-area-inset-bottom, 0px));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    padding: env(safe-area-inset-top, 0) 16px env(safe-area-inset-bottom, 0);
     opacity: 0;
     transform: translateX(0);
     pointer-events: none;
@@ -765,11 +786,16 @@
     }
   }
 
+  /* Fixed chrome: header + footer in flex flow, do not scroll */
   .tpl-b-consulting .slide-brand {
-    top: env(safe-area-inset-top, 0px);
-    left: 0;
-    right: 0;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    flex: 0 0 var(--mobile-header-h);
     height: var(--mobile-header-h);
+    margin: 0 -16px;
+    width: calc(100% + 32px);
     padding: 0 78px 0 14px;
     display: flex;
     align-items: center;
@@ -777,6 +803,7 @@
     border-bottom: 1px solid var(--line);
     background: #fff;
     box-sizing: border-box;
+    z-index: 4;
   }
 
   .tpl-b-consulting .slide-brand img {
@@ -789,6 +816,168 @@
 
   .tpl-b-consulting .slide-brand .badge {
     display: none;
+  }
+
+  .tpl-b-consulting .deck-footer {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    flex: 0 0 auto;
+    margin: 0 -16px;
+    width: calc(100% + 32px);
+    padding: 8px 16px;
+    font-size: 10px;
+    border-top: 1px solid var(--line);
+    background: #fff;
+    z-index: 4;
+  }
+
+  .tpl-b-consulting .deck-footer .slide-number {
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  /* TOC: scrollable band between header and footer */
+  .tpl-b-consulting .slide-toc {
+    overflow: hidden;
+  }
+
+  .tpl-b-consulting .slide-toc .toc-top-bar {
+    display: none;
+  }
+
+  .tpl-b-consulting .slide-toc-main {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+  }
+
+  .tpl-b-consulting .slide-toc .toc-head {
+    margin-top: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .tpl-b-consulting .slide-toc .toc-action-title {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+
+  .tpl-b-consulting .slide-toc-part .toc-section-heading {
+    font-size: 14px;
+  }
+
+  .tpl-b-consulting .slide-toc-scroll {
+    display: block;
+    overflow: visible;
+    padding: 8px 0 4px;
+  }
+
+  .tpl-b-consulting .slide-toc .toc-section {
+    overflow: visible;
+    border: none;
+    padding: 0;
+    background: transparent;
+  }
+
+  .tpl-b-consulting .slide-toc-part .toc-section h4 {
+    display: none;
+  }
+
+  .tpl-b-consulting .slide-toc-part .toc-section .count {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .tpl-b-consulting .slide-toc-part .toc-section li {
+    font-size: 14px;
+    padding: 12px 10px 12px 14px;
+  }
+
+  .tpl-b-consulting .slide-toc-part .toc-section .toc-item-num {
+    font-size: 13px;
+  }
+
+  .tpl-b-consulting .slide-toc-part .toc-item-lede {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* Article: title fixed, body scrolls */
+  .tpl-b-consulting .slide-article {
+    overflow: hidden;
+  }
+
+  .tpl-b-consulting .slide-article .article-top {
+    flex: 0 0 auto;
+    margin-top: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .tpl-b-consulting .slide-article .kicker {
+    font-size: 10px;
+  }
+
+  .tpl-b-consulting .slide-article .h2 {
+    font-size: 19px;
+    line-height: 1.3;
+    margin: 6px 0;
+  }
+
+  .tpl-b-consulting .slide-article .article-meta {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .tpl-b-consulting .slide-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    margin-top: 8px;
+    padding-right: 2px;
+    padding-bottom: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    font-size: 14px;
+    line-height: 1.68;
+  }
+
+  .tpl-b-consulting .slide-body figure.inline-figure img {
+    max-height: min(36vh, 240px);
+  }
+
+  .tpl-b-consulting .slide-scroll-fade {
+    left: 16px;
+    right: 16px;
+    bottom: calc(var(--mobile-footer-h) + 8px + env(safe-area-inset-bottom, 0px));
+    height: 36px;
+    z-index: 5;
+  }
+
+  .tpl-b-consulting .scroll-hint {
+    bottom: calc(var(--mobile-footer-h) + 14px + env(safe-area-inset-bottom, 0px));
+    font-size: 10px;
+    padding: 5px 12px;
+    max-width: calc(100% - 2rem);
+    z-index: 6;
+  }
+
+  /* Cover / section / end: middle band scrolls if needed */
+  .tpl-b-consulting .slide-cover,
+  .tpl-b-consulting .slide-section,
+  .tpl-b-consulting .slide-end {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .tpl-b-consulting .slide-cover .cover-main {
@@ -817,147 +1006,13 @@
     margin-top: 20px;
   }
 
-  .tpl-b-consulting .slide-toc {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 0;
-  }
-
-  .tpl-b-consulting .slide-toc .toc-head {
-    margin-top: 4px;
-    flex-shrink: 0;
-  }
-
-  .tpl-b-consulting .slide-toc .toc-action-title {
-    font-size: 18px;
-    line-height: 1.35;
-  }
-
-  .tpl-b-consulting .slide-toc-part .toc-section-heading {
-    font-size: 14px;
-  }
-
-  .tpl-b-consulting .slide-toc-part .toc-section li {
-    font-size: 14px;
-    padding: 12px 10px 12px 14px;
-  }
-
-  .tpl-b-consulting .slide-toc-part .toc-section .toc-item-num {
-    font-size: 13px;
-  }
-
-  .tpl-b-consulting .slide-toc-scroll {
-    grid-template-columns: 1fr;
-    flex: 1 1 auto;
-    min-height: 0;
-    max-height: none;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-  }
-
-  .tpl-b-consulting .slide-toc-part .toc-section {
-    border: none;
-    padding: 0;
-    background: transparent;
-  }
-
-  .tpl-b-consulting .slide-toc-part .toc-section h4 {
-    display: none;
-  }
-
-  .tpl-b-consulting .slide-toc-part .toc-section .count {
-    font-size: 11px;
-    margin-bottom: 12px;
-  }
-
-  .tpl-b-consulting .slide-toc-part .toc-item-lede {
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  .tpl-b-consulting .slide-article {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    min-height: 0;
-  }
-
-  .tpl-b-consulting .slide-article .article-top {
-    flex-shrink: 0;
-    margin-top: 4px;
-    padding-bottom: 10px;
-  }
-
-  .tpl-b-consulting .slide-article .kicker {
-    font-size: 10px;
-  }
-
-  .tpl-b-consulting .slide-article .h2 {
-    font-size: 19px;
-    line-height: 1.3;
-    margin: 6px 0;
-  }
-
-  .tpl-b-consulting .slide-article .article-meta {
-    font-size: 12px;
-    line-height: 1.45;
-  }
-
-  .tpl-b-consulting .slide-body {
-    flex: 1 1 auto;
-    min-height: 0;
-    max-height: none;
-    margin-top: 8px;
-    padding-right: 2px;
-    padding-bottom: 4px;
-    font-size: 14px;
-    line-height: 1.68;
-    overscroll-behavior: contain;
-  }
-
-  .tpl-b-consulting .slide-body figure.inline-figure img {
-    max-height: min(36vh, 240px);
-  }
-
-  .tpl-b-consulting .deck-footer {
-    left: 16px;
-    right: 16px;
-    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-    font-size: 10px;
-    padding-top: 8px;
-    z-index: 8;
-  }
-
-  .tpl-b-consulting .deck-footer .slide-number {
-    font-weight: 600;
-    color: var(--navy);
-  }
-
-  .tpl-b-consulting .slide-scroll-fade {
-    left: 16px;
-    right: 16px;
-    bottom: calc(56px + env(safe-area-inset-bottom, 0px));
-    height: 40px;
-    z-index: 5;
-  }
-
-  .tpl-b-consulting .scroll-hint {
-    bottom: calc(62px + env(safe-area-inset-bottom, 0px));
-    font-size: 10px;
-    padding: 5px 12px;
-    max-width: calc(100% - 2rem);
-    z-index: 6;
+  .tpl-b-consulting .slide-section .h1 {
+    font-size: 40px;
+    margin-top: 16px;
   }
 
   .tpl-b-consulting .progress-bar {
     bottom: env(safe-area-inset-bottom, 0px);
     z-index: 26;
-  }
-
-  .tpl-b-consulting .slide-section .h1 {
-    font-size: 40px;
-    margin-top: 16px;
   }
 }
